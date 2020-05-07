@@ -156,11 +156,11 @@ img {
 #master-grid-index {
     display: grid;
     grid-template-rows: auto auto auto;
-    grid-template-columns: auto auto;
+    grid-template-columns: auto;
     grid-template-areas: 
-        "nav   nav"
-        "main  main"
-        "foot  foot";
+        "nav"
+        "main"
+        "foot";
 
     /* background: url();
     background-repeat: repeat;
@@ -169,6 +169,60 @@ img {
     width: 100%; */
 }
 
+
+/*** NAV ***/
+#nav {
+    grid-area: nav;
+    position: fixed;
+    top: 0em;
+    left: 0em;
+    z-index: 30;
+    height: 3.5em;
+    width: 100%;
+    padding: 0.75em;
+
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-areas:
+    "bag logo ham";
+}
+
+.icon {
+    width: 1.5rem;
+}
+
+#navLogo {
+    grid-area: logo;
+    justify-self: center;
+    align-self: start;
+}
+    #navLogo img {
+        width: 3em;
+    }
+
+#navHam {
+    grid-area: ham;
+    z-index: 200;
+    justify-self: end;
+    align-self: start;
+    align-self: start;
+} 
+
+#navBag {
+    grid-area: bag;
+    z-index: 200;
+    justify-self: start;
+    align-self: start;
+} 
+
+#main {
+    grid-area: main;
+}
+
+
+#foot {
+    grid-area: foot;
+}
 
 /******************************** Reponsive **********************************/
 
