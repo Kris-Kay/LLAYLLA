@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&display=swap');
+
+
+/* LLAYLLA colors
+
+Dark blue main: #003a4c
+Dark blue med: #336170
+Dark blue fade: #668994
+
+Peach main: #ffd2bc
+Peach med:  #ffdbc9
+Peach fade: #ffe4d7
+
+Red main: #ea3e00
+Red med: #ee6533
+Red fade: #f28b66 */
+
+/* Light mode */
+html {
+    --color-bg: #ffe4d7;
+    --color-text: #003a4c;
+    --color-h1: #003a4c;
+    --color-h2: #003a4c;
+    --color-h3: #003a4c;
+    --color-h4: #003a4c;
+    --color-h5: #003a4c; 
+    --color-text-bg: #ffdbc9
+    /* --color-nav-bg: #003a4c; */
+    --color-foot-bg: ##003a4c;
+    --color-foot-text: #ffe4d7;
+    --color-btn: #f28b66;
+    --color-link: #ee6533;
+    --color-shdw: rgba(5, 59, 76, 0.11);
+
+    background-color: var(--color-bg);
+}
+
+/* Dark mode  */
+html.dark {
+    --color-bg: #003a4c; 
+    --color-text: #ffe4d7;
+    --color-h1: #ffe4d7;
+    --color-h2: #ffe4d7;
+    --color-h3: #ffe4d7;
+    --color-h4: #ffe4d7;
+    --color-h5: #ffe4d7;
+    --color-text-bg: #003a4c;
+    /* --color-nav-bg: #003a4c; */
+    --color-foot-bg: #003a4c;
+    --color-foot-text: #ffe4d7;
+    --color-btn: #f28b66;
+    --color-link: #ee6533;
+    --color-shdw: rgba(255, 210, 188, 0.2);
+
+    background-color: var(--color-bg);
+}
+
+body {
+    --font-body: 'Jost', sans-serif;
+    --font-head: 'Lexend Deca', sans-serif;
+    position: relative;
+    overflow: hidden;
+    font-size: 1em;
+}
+
+p {
+    font-family: var(--font-body);
+    font-weight: 300;
+	line-height: 1.25em;
+    max-width: 35em;
+    color: var(--color-h6);
+}
+
+time {
+    font-family: var(--font-body);
+    font-weight: 300;
+    max-width: 35em;
+    color: var(--color-h6);
+}
+
+li {
+    font-family: var(--font-body);
+    font-weight: 300;
+	line-height: 1em;
+    max-width: 35em;
+    color: var(--color-h6);
+}
+
+a {
+    text-decoration: none;
+    font-family: var(--font-body);
+    font-weight: 300;
+    max-width: 35em;
+    color: var(--color-link);
+}
+
+h1 {
+    font-family: var(--font-head);
+    font-size: 2em;
+	line-height: 1em;
+    max-width: 35em;
+    color: var(--color-h6);
+}
+
+h2 {
+    font-family: var(--font-head);
+    font-size: 1.5em;
+	line-height: 1em;
+    max-width: 35em;
+    color: var(--color-h6);
+}
+
+h3 {
+    font-family: var(--font-head);
+    font-size: 1.25em;
+	line-height: 1em;
+    max-width: 35em;
+    color: var(--color-h6);
+}
+
+h4 {
+    font-family: var(--font-body);
+    font-weight: 600;
+    max-width: 35em;
+    color: var(--color-h6);
+}
+
+h5 {
+    font-family: var(--font-body);
+    font-weight: 700;
+    max-width: 35em;
+    color: var(--color-h6);
+}
+
+
+button {
+    padding: 0; 
+    background: transparent;
+    border: none;
+    outline: 0;
+}
+
+img {
+    max-height: 80vh;
+}
+
+.hidden {
+    display: none;
+}
+
+/*** Mobile Grids ***/
+
+/*** Home page ***/
+#master-grid-index {
+    display: grid;
+    grid-template-rows: auto auto auto;
+    grid-template-columns: auto auto;
+    grid-template-areas: 
+        "nav   nav"
+        "main  main"
+        "foot  foot";
+
+    /* background: url();
+    background-repeat: repeat;
+    background-size: 200% auto;
+    background-position: center top;
+    width: 100%; */
+}
+
+
+/******************************** Reponsive **********************************/
+
+/*** phone 375 *************************
+@media screen and (min-width: 375px) {
+
+}
+*/
+
+/*** phone landscape 480 **************************
+@media screen and (min-width: 480px) {
+
+}
+*/
+
+/*** tablet 760 ******************************
+@media screen and (min-width: 760px) {
+
+}
+*/
+
+/*** tablet 960 ******************************
+@media screen and (min-width: 960px) {
+    
+}
+*/
+
+/*** old laptop / iPad 1024 ******************************
+@media screen and (min-width: 1024px) {
+  
+} 
+*/
+
+/*** laptop 1280 ********************************
+@media screen and (min-width: 1280px) {	
+
+} 
+*/
+
+/*** laptop 1440 ********************************
+@media screen and (min-width: 1280px) {	
+
+} 
+*/
+
+/*** desktop 1920 ********************************
+@media screen and (min-width: 1920px) {	
+
+} 
+*/
+
+/*** 27-inch iMac 2560 ********************************
+@media screen and (min-width: 2560px) {	
+
+} 
+*/
+
+
