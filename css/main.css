@@ -200,21 +200,6 @@ img {
         width: 3em;
     }
 
-#navHam {
-    grid-area: ham;
-    z-index: 200;
-    justify-self: end;
-    align-self: start;
-    align-self: start;
-} 
-
-#navBag {
-    grid-area: bag;
-    z-index: 200;
-    justify-self: start;
-    align-self: start;
-} 
-
 #main {
     grid-area: main;
 }
