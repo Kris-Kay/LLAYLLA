@@ -19,47 +19,33 @@ Red fade: #f28b66 */
 
 /* Light mode */
 html {
-    --color-bg: #ffe4d7;
-    --color-text: #003a4c;
-    --color-h1: #003a4c;
-    --color-h2: #003a4c;
-    --color-h3: #003a4c;
-    --color-h4: #003a4c;
-    --color-h5: #003a4c; 
-    --color-text-bg: #ffdbc9
-    /* --color-nav-bg: #003a4c; */
-    --color-foot-bg: ##003a4c;
-    --color-foot-text: #ffe4d7;
-    --color-btn: #f28b66;
-    --color-link: #ee6533;
-    --color-shdw: rgba(5, 59, 76, 0.11);
+    --bg: #ffe4d7;
+    --textBg: #f28b66;
+    --text: #003a4c;
+    --h1: #003a4c;
+    --h2: #003a4c;
+    --h3: #003a4c;
+    --h4: #003a4c;
+    --h5: #003a4c; 
+    --footBg: #003a4c;
+    --footText: #ffe4d7;
+    --btn: #f28b66;
+    --link: #ee6533;
+    --boxShdw: #003a4c44;
 
     background-color: var(--color-bg);
 }
 
 /* Dark mode  */
-html.dark {
-    --color-bg: #003a4c; 
-    --color-text: #ffe4d7;
-    --color-h1: #ffe4d7;
-    --color-h2: #ffe4d7;
-    --color-h3: #ffe4d7;
-    --color-h4: #ffe4d7;
-    --color-h5: #ffe4d7;
-    --color-text-bg: #003a4c;
-    /* --color-nav-bg: #003a4c; */
-    --color-foot-bg: #003a4c;
-    --color-foot-text: #ffe4d7;
-    --color-btn: #f28b66;
-    --color-link: #ee6533;
-    --color-shdw: rgba(255, 210, 188, 0.2);
+/* html.dark {
 
-    background-color: var(--color-bg);
-}
+    background-color: var(--bg);
+} 
+*/
 
 body {
-    --font-body: 'Jost', sans-serif;
     --font-head: 'Lexend Deca', sans-serif;
+    --font-body: 'Jost', sans-serif;
     position: relative;
     overflow: hidden;
     font-size: 1em;
@@ -150,7 +136,6 @@ img {
     display: none;
 }
 
-/*** Mobile Grids ***/
 
 /*** Home page ***/
 #master-grid-index {
@@ -161,19 +146,13 @@ img {
         "nav"
         "main"
         "foot";
-
-    /* background: url();
-    background-repeat: repeat;
-    background-size: 200% auto;
-    background-position: center top;
-    width: 100%; */
 }
 
 
 /*** NAV ***/
 #nav {
     grid-area: nav;
-    position: fixed;
+    position: relative;
     top: 0em;
     left: 0em;
     z-index: 30;
@@ -182,9 +161,9 @@ img {
     padding: 0.75em;
 
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: auto auto;
     grid-template-areas:
-    "bag logo ham";
+    "logo .";
 }
 
 .icon {
@@ -193,8 +172,9 @@ img {
 
 #navLogo {
     grid-area: logo;
-    justify-self: center;
+    justify-self: start;
     align-self: start;
+    position: fixed;
 }
     #navLogo img {
         width: 3em;
@@ -204,9 +184,41 @@ img {
     grid-area: main;
 }
 
+.hero {
+    width: 100vw;
+}
+
+.tagLine {
+
+}
+
+.textBox {
+
+}
+
+.carousel {
+
+}
+
+.request {
+    display: flex;
+}
+    .request h4 {
+        background-color: var(--textBg);
+        font-size: 1em;
+        line-height: 1em;
+        margin: 3em;
+        padding: 1em;
+        border-radius: 1em;
+        box-shadow: 0.75em 0.75em 1.25em var(--boxShdw); 
+    }
+
 
 #foot {
     grid-area: foot;
+    background-color: var(--footBg);
+    color: var(--footText);
+    padding: 0.75em;
 }
 
 /******************************** Reponsive **********************************/
