@@ -20,9 +20,9 @@ Red fade: #f28b66 */
 /* Light mode */
 html {
     --bg: #ffe4d7;
-    --textBg: #f28b66;
+    --textBg: #ffd2bc;
     --text: #003a4c;
-    --h1: #003a4c;
+    --h1: #336170;
     --h2: #003a4c;
     --h3: #003a4c;
     --h4: #003a4c;
@@ -85,17 +85,18 @@ a {
 h1 {
     font-family: var(--font-head);
     font-size: 2em;
-	line-height: 1em;
+	line-height: 1.5em;
     max-width: 35em;
-    color: var(--color-h6);
+    color: var(--h1);
 }
 
 h2 {
-    font-family: var(--font-head);
+    font-family: var(--font-body);
     font-size: 1.5em;
-	line-height: 1em;
+    line-height: 1.25em;
+    font-weight: 200;
     max-width: 35em;
-    color: var(--color-h6);
+    color: var(--h2);
 }
 
 h3 {
@@ -103,21 +104,21 @@ h3 {
     font-size: 1.25em;
 	line-height: 1em;
     max-width: 35em;
-    color: var(--color-h6);
+    color: var(--h3);
 }
 
 h4 {
     font-family: var(--font-body);
     font-weight: 600;
     max-width: 35em;
-    color: var(--color-h6);
+    color: var(--h4);
 }
 
 h5 {
     font-family: var(--font-body);
     font-weight: 700;
     max-width: 35em;
-    color: var(--color-h6);
+    color: var(--h5);
 }
 
 
@@ -182,6 +183,7 @@ img {
 
 #main {
     grid-area: main;
+    padding: 0.75em;
 }
 
 .hero {
@@ -189,7 +191,20 @@ img {
 }
 
 .tagLine {
+    background-color: var(--textBg);
+        font-size: 1em;
+        line-height: 1em;
+        margin: auto;
+        padding: 1em;
+        border-radius: 1em;
+        box-shadow: 0.75em 0.75em 1.25em var(--boxShdw); 
+}
 
+#tagWordLogo {
+    width: 10em;
+    display: flex;
+    margin: auto;
+    padding: 0.5em 0;
 }
 
 .textBox {
@@ -197,8 +212,24 @@ img {
 }
 
 .carousel {
-
+    display: flex;
+    scroll-snap-type: x mandatory;
+    overflow-x: scroll;
+    align-items: flex-start;
 }
+
+.slide { 
+    flex-shrink: 0; 
+    width: 90%;
+    scroll-snap-align: start;
+    overflow: hidden;
+}
+    .slide img {
+        vertical-align: middle;
+        object-fit: contain;
+        height: 100%;
+        width: 100%;
+    }
 
 .request {
     display: flex;
@@ -207,7 +238,7 @@ img {
         background-color: var(--textBg);
         font-size: 1em;
         line-height: 1em;
-        margin: 3em;
+        margin: 2em;
         padding: 1em;
         border-radius: 1em;
         box-shadow: 0.75em 0.75em 1.25em var(--boxShdw); 
