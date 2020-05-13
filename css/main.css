@@ -159,7 +159,6 @@ img {
     z-index: 30;
     height: 3.5em;
     width: 100%;
-    padding: 0.75em;
 
     display: grid;
     grid-template-columns: auto auto;
@@ -176,6 +175,7 @@ img {
     justify-self: start;
     align-self: start;
     position: fixed;
+    padding: 0.75em;
 }
     #navLogo img {
         width: 3em;
@@ -183,27 +183,34 @@ img {
 
 #main {
     grid-area: main;
+    position: relative;
 }
 
 .hero {
     width: 100vw;
 }
 
+#landHero {
+    top: 0;
+    left: 0;
+}
+
 .tagLine {
     background-color: var(--textBg);
-        font-size: 1em;
-        line-height: 1em;
-        margin: auto;
-        padding: 1em;
-        border-radius: 1em;
-        box-shadow: 0.75em 0.75em 1.25em var(--boxShdw); 
+    font-size: 1em;
+    line-height: 1em;
+    width: 80vw;
+    margin: 2em auto;
+    padding: 2em;
+    border-radius: 1em;
+    box-shadow: 0.75em 0.75em 1.25em var(--boxShdw); 
 }
 
 #tagWordLogo {
     width: 10em;
     display: flex;
     margin: auto;
-    padding: 0.5em 0;
+    padding: 0.75em 0;
 }
 
 .textBox {
@@ -237,18 +244,32 @@ img {
         background-color: var(--textBg);
         font-size: 1em;
         line-height: 1em;
-        margin: 2em;
-        padding: 1em;
+        margin: 2em auto;
+        padding: 1.5em;
         border-radius: 1em;
         box-shadow: 0.75em 0.75em 1.25em var(--boxShdw); 
     }
-
 
 #foot {
     grid-area: foot;
     background-color: var(--footBg);
     color: var(--footText);
     padding: 0.75em;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-areas: 
+        ". social"
+        "copy copy";
+}
+
+#foot-social {
+    display: block;
+    justify-self: flex-end;
+    grid-area: social;
+}
+
+.copy {
+    grid-area: copy;
 }
 
 /******************************** Reponsive **********************************/
