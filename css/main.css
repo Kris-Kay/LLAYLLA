@@ -176,14 +176,15 @@ img {
     align-self: start;
     position: fixed;
     padding: 0.75em;
+    z-index: 10;
 }
     #navLogo img {
-        width: 3em;
+        width: 2.5em;
     }
 
 #main {
     grid-area: main;
-    position: relative;
+   
 }
 
 .hero {
@@ -191,23 +192,25 @@ img {
 }
 
 #landHero {
+    position: absolute;
     top: 0;
     left: 0;
+    z-index: 1;
 }
 
 .tagLine {
     background-color: var(--textBg);
     font-size: 1em;
     line-height: 1em;
-    width: 80vw;
-    margin: 2em auto;
     padding: 2em;
     border-radius: 1em;
     box-shadow: 0.75em 0.75em 1.25em var(--boxShdw); 
+    margin: 17em auto 3em;
+    width: 60vw;
 }
 
 #tagWordLogo {
-    width: 10em;
+    width: 8em;
     display: flex;
     margin: auto;
     padding: 0.75em 0;
