@@ -49,6 +49,12 @@ body {
     position: relative;
     overflow: hidden;
     font-size: 1em;
+
+    background: url(/img/pattern-no-SE-LLAYLLA.svg);
+    background-repeat: no-repeat;
+    background-size: 200% auto;
+    background-position: center top;
+    width: 100%;
 }
 
 p {
@@ -183,8 +189,7 @@ img {
     }
 
 #main {
-    grid-area: main;
-   
+    grid-area: main;    
 }
 
 .hero {
