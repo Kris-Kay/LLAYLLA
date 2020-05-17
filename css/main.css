@@ -52,8 +52,8 @@ body {
 
     background: url(/img/pattern-no-SE-LLAYLLA.svg);
     background-repeat: no-repeat;
-    background-size: 200% auto;
-    background-position: center top;
+    background-size: 100% auto;
+    background-position: top 14em center;;
     width: 100%;
 }
 
@@ -211,14 +211,13 @@ img {
     border-radius: 1em;
     box-shadow: 0.75em 0.75em 1.25em var(--boxShdw); 
     margin: 17em auto 3em;
-    width: 60vw;
+    width: 80vw;
 }
 
 #tagWordLogo {
-    width: 8em;
+    width: 10em;
     display: flex;
-    margin: auto;
-    padding: 0.75em 0;
+    padding: 0 0 0.5em 0;
 }
 
 .textBox {
