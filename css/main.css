@@ -281,6 +281,38 @@ button {
         box-shadow: 0.75em 0.75em 1.25em var(--boxShdw); 
     }
 
+#requestModal {
+    background-color: var(--textBg);
+    margin: 2em 0.75em;
+    padding: 1.5em;
+    border-radius: 1em;
+
+    display: grid;
+    grid-template-columns: auto 1.5em;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: 
+        ". x"
+        "word word"
+        "email btn";
+}
+
+#modalX {
+    grid-area: x;
+}
+
+#modalWord {
+    grid-area: word;
+    padding: 1em 0;
+}
+
+#modalEmail {
+    grid-area: email;
+}
+
+#emailCopy {
+    grid-area: btn;
+}
+
 #foot {
     grid-area: foot;
     background-color: var(--footBg);
