@@ -20,7 +20,7 @@ Red fade: #f28b66 */
 /* Light mode */
 html {
     --bg: #ffe4d7;
-    --textBg: #ffd2bc;
+    --textBg: #ffdbc9;
     --text: #003a4c;
     --h1: #336170;
     --h2: #003a4c;
@@ -135,10 +135,6 @@ button {
     outline: 0;
 }
 
-img {
-    max-height: 80vh;
-}
-
 .hidden {
     display: none;
 }
@@ -220,12 +216,28 @@ img {
     padding: 0 0 0.5em 0;
 }
 
+#maid {
+    margin: 1em auto;
+}
+
+#maskBraPanty {
+    background-color: var(--textBg);
+    margin: 2em 0.75em;
+    padding: 1.5em;
+    border-radius: 1em;
+    display: flex;
+    box-shadow: 0.75em 0.75em 1.25em var(--boxShdw); 
+}
+    #maskBraPanty img {
+     padding: 0 1em 0 0;
+    }
+
 .carousel {
     display: flex;
     scroll-snap-type: x mandatory;
     overflow-x: scroll;
     align-items: flex-start;
-    margin: 0.75em auto;
+    margin: 2em auto;
 }
 
 .slide { 
@@ -242,14 +254,18 @@ img {
     }
 
 .imgText {
-    margin: 0.75em;;
+    margin: 0.75em;
+    background-color: var(--textBg);
+    padding: 1.5em;
+    border-radius: 1em;
 }
 
 .textBox {
     background-color: var(--textBg);
-    margin: 0.75em;
+    margin: 2em 0.75em;
     padding: 1.5em;
     border-radius: 1em;
+    box-shadow: 0.75em 0.75em 1.25em var(--boxShdw); 
 }
 
 .request {
@@ -259,7 +275,7 @@ img {
         background-color: var(--btn);
         font-size: 1em;
         line-height: 1em;
-        margin: 1em auto;
+        margin: 0 auto;
         padding: 1.5em;
         border-radius: 1em;
         box-shadow: 0.75em 0.75em 1.25em var(--boxShdw); 
