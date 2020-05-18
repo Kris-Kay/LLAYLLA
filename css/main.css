@@ -303,9 +303,9 @@ button {
         "word word"
         "email btn";
 }
-#requestModal.open {
-    display: grid;
-}
+    #requestModal.open {
+        display: grid;
+    }
 
 #modalX {
     grid-area: x;
