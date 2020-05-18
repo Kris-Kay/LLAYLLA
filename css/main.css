@@ -21,6 +21,7 @@ Red fade: #f28b66 */
 html {
     --bg: #ffe4d7;
     --textBg: #ffdbc9;
+    --textBgDarker: #ffd2bc;
     --text: #003a4c;
     --h1: #336170;
     --h2: #003a4c;
@@ -258,6 +259,8 @@ button {
     background-color: var(--textBg);
     padding: 1.5em;
     border-radius: 1em;
+    box-shadow: 0.5em 0.5em 2em var(--boxShdw); 
+    
 }
 
 .textBox {
@@ -275,25 +278,33 @@ button {
         background-color: var(--btn);
         font-size: 1em;
         line-height: 1em;
-        margin: 0 auto;
+        margin: 1em auto;
         padding: 1.5em;
         border-radius: 1em;
         box-shadow: 0.75em 0.75em 1.25em var(--boxShdw); 
     }
 
 #requestModal {
-    background-color: var(--textBg);
+    position: absolute;
+    bottom: 6.5em;
+    left: auto;
+
+    background-color: var(--textBgDarker);
     margin: 2em 0.75em;
     padding: 1.5em;
     border-radius: 1em;
+    box-shadow: 0.75em 0.75em 1.25em var(--boxShdw); 
 
-    display: grid;
+    display: none;
     grid-template-columns: auto 1.5em;
     grid-template-rows: auto auto auto;
     grid-template-areas: 
         ". x"
         "word word"
         "email btn";
+}
+#requestModal.open {
+    display: grid;
 }
 
 #modalX {
