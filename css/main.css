@@ -122,7 +122,7 @@ h4 {
 
 h5 {
     font-family: var(--font-body);
-    font-weight: 700;
+    font-weight: 400;
     max-width: 35em;
     color: var(--h5);
 }
@@ -220,15 +220,12 @@ img {
     padding: 0 0 0.5em 0;
 }
 
-.textBox {
-
-}
-
 .carousel {
     display: flex;
     scroll-snap-type: x mandatory;
     overflow-x: scroll;
     align-items: flex-start;
+    margin: 0.75em auto;
 }
 
 .slide { 
@@ -244,14 +241,22 @@ img {
         width: 100%;
     }
 
+
+.textBox {
+    background-color: var(--textBg);
+    margin: 0.75em;
+    padding: 1.5em;
+    border-radius: 1em;
+}
+
 .request {
     display: flex;
 }
     .request h4 {
-        background-color: var(--textBg);
+        background-color: var(--btn);
         font-size: 1em;
         line-height: 1em;
-        margin: 2em auto;
+        margin: 1em auto;
         padding: 1.5em;
         border-radius: 1em;
         box-shadow: 0.75em 0.75em 1.25em var(--boxShdw); 
