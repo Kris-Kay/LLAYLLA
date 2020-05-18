@@ -241,6 +241,9 @@ img {
         width: 100%;
     }
 
+.imgText {
+    margin: 0.75em;;
+}
 
 .textBox {
     background-color: var(--textBg);
