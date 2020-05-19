@@ -23,14 +23,15 @@ html {
     --textBg: #ffdbc9;
     --textBgDarker: #ffd2bc;
     --text: #003a4c;
-    --h1: #336170;
-    --h2: #003a4c;
+    --h1: #ee6533;
+    --h2: #336170;
     --h3: #003a4c;
     --h4: #003a4c;
     --h5: #003a4c; 
     --footBg: #003a4c;
     --footText: #ffe4d7;
-    --btn: #f28b66;
+    --btn: #ee6533;
+    --btnText: #ffe4d7;
     --link: #ee6533;
     --boxShdw: #003a4c44;
 
@@ -222,17 +223,63 @@ button {
     margin: 1em auto;
 }
 
+/* Mask Bra Panty */
 #maskBraPanty {
     background-color: var(--textBg);
     margin: 2em 0.75em;
     padding: 1.5em;
     border-radius: 1em;
     box-shadow: 0.75em 0.75em 1.25em var(--boxShdw); 
+
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(5, auto);
+    grid-template-areas: 
+        "h1"
+        "mask"
+        "bra"
+        "pan"
+        "text";
+
+    justify-items: center;
 }
     #maskBraPanty img {
-        width: 80vw;
-        padding: 1em;
+        width: 60vw;
+        padding: 2em;
+        margin: auto;
     }
+
+#mbpTitle {
+    grid-area: h1;
+}
+
+#maskBox {
+    grid-area: mask;
+    display: grid;
+}
+    #maskBox img {
+        justify-self: center;
+    }
+
+#braBox {
+    grid-area: bra;
+    display: grid;
+}
+    #braBox img {
+        justify-self: center;
+    }
+
+#pantyBox {
+    grid-area: pan;
+    display: grid;
+}
+    #pantyBox img {
+        justify-self: center;
+    }
+
+#mbpText {
+    grid-area: text;
+}
 
 .carousel {
     display: flex;
@@ -277,10 +324,12 @@ button {
 }
     .request h4 {
         background-color: var(--btn);
+        color: var(--btnText);
         font-size: 1em;
         line-height: 1em;
+        letter-spacing: .5px;
         margin: 1em auto;
-        padding: 1.5em;
+        padding: 1em;
         border-radius: 1em;
         box-shadow: 0.75em 0.75em 1.25em var(--boxShdw); 
     }
