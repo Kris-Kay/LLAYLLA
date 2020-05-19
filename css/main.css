@@ -24,14 +24,14 @@ html {
     --textBgDarker: #ffd2bc;
     --text: #003a4c;
     --h1: #ee6533;
-    --h2: #336170;
+    --h2: #f28b66;
     --h3: #003a4c;
     --h4: #003a4c;
     --h5: #003a4c; 
     --footBg: #003a4c;
     --footText: #ffe4d7;
-    --btn: #ee6533;
-    --btnText: #ffe4d7;
+    --btn: #003a4c;
+    --btnText: #ee6533;
     --link: #ee6533;
     --boxShdw: #003a4c44;
 
@@ -382,8 +382,12 @@ button {
     display: grid;
     grid-template-columns: auto auto;
     grid-template-areas: 
-        ". social"
+        "email social"
         "copy copy";
+}
+
+#footEmail {
+    grid-area: email;
 }
 
 #foot-social {
@@ -392,8 +396,9 @@ button {
     grid-area: social;
 }
 
-.copy {
+#copyR {
     grid-area: copy;
+    color: var(--footText);
 }
 
 /******************************** Reponsive **********************************/
