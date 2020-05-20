@@ -31,7 +31,7 @@ html {
     --footBg: #003a4c;
     --footText: #ffe4d7;
     --btn: #003a4c;
-    --btnText: #ee6533;
+    --btnText: #f28b66;
     --link: #ee6533;
     --boxShdw: #003a4c44;
 
@@ -92,8 +92,9 @@ a {
 
 h1 {
     font-family: var(--font-head);
-    font-size: 2em;
-	line-height: 1.5em;
+    font-size: 2.5em;
+    line-height: 1.25em;
+    text-align: center;
     max-width: 35em;
     color: var(--h1);
 }
@@ -117,7 +118,10 @@ h3 {
 
 h4 {
     font-family: var(--font-body);
-    font-weight: 600;
+    font-size: 1em;
+    font-weight: 500;
+    line-height: 1em;
+    letter-spacing: .5px;
     max-width: 35em;
     color: var(--h4);
 }
@@ -314,7 +318,7 @@ button {
 .textBox {
     background-color: var(--textBg);
     margin: 2em 0.75em;
-    padding: 1.5em;
+    padding: 2.5em 2em 1em 2em;
     border-radius: 1em;
     box-shadow: 0.75em 0.75em 1.25em var(--boxShdw); 
 }
@@ -325,9 +329,6 @@ button {
     .request h4 {
         background-color: var(--btn);
         color: var(--btnText);
-        font-size: 1em;
-        line-height: 1em;
-        letter-spacing: .5px;
         margin: 1em auto;
         padding: 1em;
         border-radius: 1em;
