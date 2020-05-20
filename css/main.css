@@ -51,6 +51,8 @@ body {
     position: relative;
     overflow: hidden;
     font-size: 1em;
+    line-height: 1.75em;
+    letter-spacing: .1px;
 
     background: url(/img/pattern-no-SE-LLAYLLA.svg);
     background-repeat: no-repeat;
@@ -192,7 +194,9 @@ button {
     }
 
 #main {
-    grid-area: main;    
+    grid-area: main;  
+    font-display: grid; 
+    justify-items: center; 
 }
 
 .hero {
@@ -204,6 +208,7 @@ button {
     top: 0;
     left: 0;
     z-index: 1;
+    width: 100vw;
 }
 
 .tagLine {
@@ -230,6 +235,7 @@ button {
 
 /* Mask Bra Panty */
 #maskBraPanty {
+    margin: auto;
     background-color: var(--textBg);
     margin: 2em 0.75em;
     padding: 1.5em;
@@ -245,12 +251,18 @@ button {
         "bra"
         "pan"
         "text";
-
 }
     #maskBraPanty img {
         width: 60vw;
         padding: 2em;
         margin: auto;
+    }
+
+    #maskBraPanty li {
+        margin: 1em 0;
+        font-family: var(--font-body);
+        font-weight: 400;
+        line-height: 1.5;
     }
 
 #mbpTitle {
@@ -424,6 +436,17 @@ button {
     .tagLine {
         margin: 17em auto 3em;
     }
+
+    #maskBraPanty {
+        max-width: 80vw;
+        margin: auto;
+    }
+        #maskBraPanty img {
+            width: 60vw;
+        }
+        #maskBraPanty h1 {
+            font-size: 2em;
+        }
 }
 
 
@@ -432,11 +455,11 @@ button {
     body {
         font-size: 2em;
         line-height: 2.25em;
-        background-position: top 19em center;
+        background-position: top 17em center;
     }
 
     #navLogo img {
-        width: 7em;
+        width: 6em;
     }
 
     .icon {
@@ -444,8 +467,25 @@ button {
     }
 
     .tagLine {
-        margin: 20em auto 10em;
-        width: 80vw;
+        margin: 20em auto 5em;
+        width: 70vw;
+    }
+
+    #maskBraPanty {
+        max-width: 70vw;
+        margin: auto;
+    }
+        #maskBraPanty img {
+            width: 50vw;
+        }
+        #maskBraPanty h1 {
+            font-size: 1.75em;
+        }
+    
+    .textBox {
+        max-width: 80vw;
+        margin: 2em auto;
+        padding: 2.5em 2em 1em 2em;
     }
 }
 
@@ -473,11 +513,45 @@ button {
 }
 
 
-/*** old laptop / iPad 1024 ******************************
+/*** old laptop / iPad 1024 ******************************/
 @media screen and (min-width: 1024px) {
-  
+    body {
+        font-size: 2.5em;
+        line-height: 2.75em;
+        background-position: top 19em center;
+    }
+
+    br {
+       height: 0.5em;
+    }
+
+    #navLogo img {
+        width: 8em;
+    }
+
+    .icon {
+        width: 3.75rem;
+    }
+
+    .tagLine {
+        margin: 20em auto 10em;
+        width: 75vw;
+    }
+
+    #maskBraPanty {
+        max-width: 70vw;
+        margin: auto;
+    }
+        #maskBraPanty img {
+            width: 50vw;
+            padding: 2em;
+            margin: auto;
+        }
+        #maskBraPanty h1 {
+            font-size: 2em;
+        }
 } 
-*/
+
 
 /*** laptop 1280 ********************************
 @media screen and (min-width: 1280px) {	
