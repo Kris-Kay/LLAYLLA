@@ -55,7 +55,7 @@ body {
     background: url(/img/pattern-no-SE-LLAYLLA.svg);
     background-repeat: no-repeat;
     background-size: 100% auto;
-    background-position: top 14em center;;
+    background-position: top 14em center;
     width: 100%;
 }
 
@@ -225,6 +225,7 @@ button {
 
 #maid {
     margin: 1em auto;
+    width: 100%;
 }
 
 /* Mask Bra Panty */
@@ -409,6 +410,7 @@ button {
     body {
         font-size: 1.25em;
         line-height: 1.5em;
+        background-position: top 15em center;
     }
 
     #navLogo img {
@@ -418,20 +420,58 @@ button {
     .icon {
         width: 1.75rem;
     }
+
+    .tagLine {
+        margin: 17em auto 3em;
+    }
 }
 
 
-/*** tablet 760 ******************************
+/*** tablet 760 ******************************/
 @media screen and (min-width: 760px) {
+    body {
+        font-size: 2em;
+        line-height: 2.25em;
+        background-position: top 19em center;
+    }
 
+    #navLogo img {
+        width: 7em;
+    }
+
+    .icon {
+        width: 3rem;
+    }
+
+    .tagLine {
+        margin: 20em auto 10em;
+        width: 80vw;
+    }
 }
-*/
 
-/*** tablet 960 ******************************
+
+/*** tablet 960 ******************************/
 @media screen and (min-width: 960px) {
-    
+    body {
+        font-size: 2.25em;
+        line-height: 2.5em;
+        background-position: top 19em center;
+    }
+
+    #navLogo img {
+        width: 8em;
+    }
+
+    .icon {
+        width: 3.75rem;
+    }
+
+    .tagLine {
+        margin: 20em auto 10em;
+        width: 75vw;
+    }
 }
-*/
+
 
 /*** old laptop / iPad 1024 ******************************
 @media screen and (min-width: 1024px) {
