@@ -237,7 +237,7 @@ button {
 
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows: repeat(5, auto);
+    grid-template-rows: auto auto auto auto auto;
     grid-template-areas: 
         "h1"
         "mask"
@@ -245,7 +245,6 @@ button {
         "pan"
         "text";
 
-    justify-items: center;
 }
     #maskBraPanty img {
         width: 60vw;
@@ -285,6 +284,7 @@ button {
     grid-area: text;
 }
 
+/*carousel*/
 .carousel {
     display: flex;
     scroll-snap-type: x mandatory;
@@ -404,17 +404,22 @@ button {
 
 /******************************** Reponsive **********************************/
 
-/*** phone 375 *************************
-@media screen and (min-width: 375px) {
+/*** phone landscape 425 **************************/
+@media screen and (min-width: 425px) {
+    body {
+        font-size: 1.25em;
+        line-height: 1.5em;
+    }
 
+    #navLogo img {
+        width: 4em;
+    }
+
+    .icon {
+        width: 1.75rem;
+    }
 }
-*/
 
-/*** phone landscape 480 **************************
-@media screen and (min-width: 480px) {
-
-}
-*/
 
 /*** tablet 760 ******************************
 @media screen and (min-width: 760px) {
