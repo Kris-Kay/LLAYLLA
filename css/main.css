@@ -48,56 +48,58 @@ html {
 body {
     --font-head: 'Lexend Deca', sans-serif;
     --font-body: 'Jost', sans-serif;
+
     position: relative;
-    overflow: hidden;
+    /* overflow: hidden; */
     font-size: 1em;
-    line-height: 1.75em;
+    line-height: 1.5em;
     letter-spacing: .1px;
 
-    background: url(/img/pattern-no-SE-LLAYLLA.svg);
+    background: url(/img/photos/peachy-bra-05-LLAYLLA),
+                url(/img/pattern-no-SE-LLAYLLA.svg);
     background-repeat: no-repeat;
-    background-size: 100% auto;
-    background-position: top 14em center;
+    background-size: 100% auto,
+                     95% auto;
+    background-position: top 0 center,
+                         top 14.5em center;
     width: 100%;
 }
 
 p {
     font-family: var(--font-body);
     font-weight: 300;
-	line-height: 1.25em;
-    max-width: 35em;
     color: var(--text);
 }
 
 time {
     font-family: var(--font-body);
     font-weight: 300;
-    max-width: 35em;
+    letter-spacing: .5px;
     color: var(--text);
 }
 
 li {
     font-family: var(--font-body);
-    font-weight: 300;
-	line-height: 1em;
-    max-width: 35em;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: .2px;
     color: var(--text);
+    margin: 1em 0;
 }
 
 a {
     text-decoration: none;
     font-family: var(--font-body);
     font-weight: 300;
-    max-width: 35em;
     color: var(--link);
 }
 
 h1 {
     font-family: var(--font-head);
-    font-size: 2.5em;
+    font-size: 2em;
     line-height: 1.25em;
+    letter-spacing: .5px;
     text-align: center;
-    max-width: 35em;
     color: var(--h1);
 }
 
@@ -105,16 +107,16 @@ h2 {
     font-family: var(--font-body);
     font-size: 1.5em;
     line-height: 1.25em;
+    letter-spacing: .5px;
     font-weight: 200;
-    max-width: 35em;
     color: var(--h2);
 }
 
 h3 {
     font-family: var(--font-head);
     font-size: 1.25em;
-	line-height: 1em;
-    max-width: 35em;
+    line-height: 1em;
+    letter-spacing: .5px;
     color: var(--h3);
 }
 
@@ -149,7 +151,7 @@ button {
 }
 
 
-/*** Home page ***/
+/*** Home page GRID ***/
 #master-grid-index {
     display: grid;
     grid-template-rows: auto auto auto;
@@ -162,23 +164,18 @@ button {
 
 
 /*** NAV ***/
-#nav {
+#topNav {
     grid-area: nav;
     position: relative;
+    width: 100%;
     top: 0em;
     left: 0em;
-    z-index: 30;
-    height: 3.5em;
-    width: 100%;
+    z-index: 100;
 
     display: grid;
     grid-template-columns: auto auto;
     grid-template-areas:
     "logo .";
-}
-
-.icon {
-    width: 1.5rem;
 }
 
 #navLogo {
@@ -187,11 +184,16 @@ button {
     align-self: start;
     position: fixed;
     padding: 0.75em;
-    z-index: 10;
 }
     #navLogo img {
-        width: 2.5em;
+        width: 3em;
     }
+
+
+/*** MAIN ***/
+.icon {
+    width: 1.5rem;
+}
 
 #main {
     grid-area: main;  
@@ -199,22 +201,8 @@ button {
     justify-items: center; 
 }
 
-.hero {
-    width: 100vw;
-}
-
-#landHero {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    width: 100vw;
-}
-
 .tagLine {
     background-color: var(--textBg);
-    font-size: 1em;
-    line-height: 1em;
     padding: 2em;
     border-radius: 1em;
     box-shadow: 0.75em 0.75em 1.25em var(--boxShdw); 
@@ -235,7 +223,6 @@ button {
 
 /* Mask Bra Panty */
 #maskBraPanty {
-    margin: auto;
     background-color: var(--textBg);
     margin: 2em 0.75em;
     padding: 1.5em;
@@ -254,15 +241,8 @@ button {
 }
     #maskBraPanty img {
         width: 60vw;
-        padding: 2em;
+        padding: 1em;
         margin: auto;
-    }
-
-    #maskBraPanty li {
-        margin: 1em 0;
-        font-family: var(--font-body);
-        font-weight: 400;
-        line-height: 1.5;
     }
 
 #mbpTitle {
@@ -297,6 +277,7 @@ button {
     grid-area: text;
 }
 
+
 /*carousel*/
 .carousel {
     display: flex;
@@ -320,18 +301,18 @@ button {
     }
 
 .imgText {
-    margin: 0.75em;
+    margin: 0.75em 0.75em 1.5em 0.75em;
     background-color: var(--textBg);
     padding: 1.5em;
     border-radius: 1em;
     box-shadow: 0.5em 0.5em 2em var(--boxShdw); 
-    
 }
 
-.textBox {
+/*Request*/
+.requestBox {
     background-color: var(--textBg);
-    margin: 2em 0.75em;
-    padding: 2.5em 2em 1em 2em;
+    margin: 0 0.75em 2em 0.75em;
+    padding: 1.5em 1.5em 1em 1.5em;
     border-radius: 1em;
     box-shadow: 0.75em 0.75em 1.25em var(--boxShdw); 
 }
@@ -349,22 +330,25 @@ button {
     }
 
 #requestModal {
+    display: none;
+
     position: absolute;
-    bottom: 6.5em;
-    left: auto;
+    bottom: 6em;
+    left: 0;
+    right: 0;
 
     background-color: var(--textBgDarker);
-    margin: 2em 0.75em;
+    max-width: 90vw;
+    margin: auto;
     padding: 1.5em;
     border-radius: 1em;
     box-shadow: 0.75em 0.75em 1.25em var(--boxShdw); 
 
-    display: none;
-    grid-template-columns: auto 1.5em;
+    grid-template-columns: auto 3em;
     grid-template-rows: auto auto auto;
     grid-template-areas: 
-        ". x"
-        "word word"
+        "intro x"
+        "word  word"
         "email btn";
 }
     #requestModal.open {
@@ -373,21 +357,34 @@ button {
 
 #modalX {
     grid-area: x;
+    align-self: start;
+    justify-self: end;
+}
+
+#modalIntro {
+    grid-area: intro;
+    margin: 0 0.5em 0 0;
 }
 
 #modalWord {
     grid-area: word;
-    padding: 1em 0;
+    margin: 1em 0 0 0;
 }
 
 #modalEmail {
     grid-area: email;
+    margin: 0 0.5em 0 0;
+    justify-self: end;
+    align-self: center;
 }
 
 #emailCopy {
     grid-area: btn;
+    justify-self: end;
 }
 
+
+/*FOOT*/
 #foot {
     grid-area: foot;
     background-color: var(--footBg);
@@ -406,8 +403,8 @@ button {
 
 #foot-social {
     display: block;
-    justify-self: flex-end;
     grid-area: social;
+    justify-self: end;
 }
 
 #copyR {
@@ -417,12 +414,13 @@ button {
 
 /******************************** Reponsive **********************************/
 
-/*** phone landscape 425 **************************/
-@media screen and (min-width: 425px) {
+/*** iPhone X 375 **************************/
+@media screen and (min-width: 375px) {
     body {
-        font-size: 1.25em;
-        line-height: 1.5em;
-        background-position: top 15em center;
+        font-size: 1.1em;
+        line-height: 1.25em;
+        background-position: top 0 center,
+                             top 15em center;
     }
 
     #navLogo img {
@@ -434,15 +432,48 @@ button {
     }
 
     .tagLine {
-        margin: 17em auto 3em;
+        margin: 17.5em auto 4em;
     }
 
     #maskBraPanty {
-        max-width: 80vw;
+        max-width: 90vw;
         margin: auto;
     }
         #maskBraPanty img {
-            width: 60vw;
+            width: 50vw;
+        }
+        #maskBraPanty h1 {
+            font-size: 2em;
+        }
+}
+
+/*** phone landscape 425 **************************/
+@media screen and (min-width: 425px) {
+    body {
+        font-size: 1.1em;
+        line-height: 1.25em;
+        background-position: top 0 center,
+                             top 17em center;
+    }
+
+    #navLogo img {
+        width: 4em;
+    }
+
+    .icon {
+        width: 1.75rem;
+    }
+
+    .tagLine {
+        margin: 20em auto 6em;
+    }
+
+    #maskBraPanty {
+        max-width: 90vw;
+        margin: auto;
+    }
+        #maskBraPanty img {
+            width: 50vw;
         }
         #maskBraPanty h1 {
             font-size: 2em;
@@ -453,39 +484,50 @@ button {
 /*** tablet 760 ******************************/
 @media screen and (min-width: 760px) {
     body {
-        font-size: 2em;
-        line-height: 2.25em;
-        background-position: top 17em center;
+        font-size: 1.25em;
+        line-height: 1.5em;
+        background-position: top 0 center,
+                             top 27em center;
     }
 
     #navLogo img {
-        width: 6em;
+        width: 5em;
     }
 
     .icon {
-        width: 3rem;
+        width: 2rem;
     }
 
     .tagLine {
-        margin: 20em auto 5em;
-        width: 70vw;
+        margin: 32em auto 23em;
+        width: 65vw;
     }
 
     #maskBraPanty {
-        max-width: 70vw;
-        margin: auto;
+        max-width: 60vw;
+        margin: 2em auto;
     }
         #maskBraPanty img {
-            width: 50vw;
+            width: 40vw;
         }
         #maskBraPanty h1 {
-            font-size: 1.75em;
+            font-size: 2.25em;
         }
-    
-    .textBox {
-        max-width: 80vw;
-        margin: 2em auto;
-        padding: 2.5em 2em 1em 2em;
+
+    .imgText {
+        max-width: 70vw;
+        margin: 0.75em auto 1.5em 0.75em;
+    }
+
+    .requestBox {
+        max-width: 70vw;
+        margin: 0 auto 2em auto;
+    }
+
+    #requestModal {
+        bottom: 7em;
+        max-width: 70vw;
+        margin: auto;
     }
 }
 
@@ -493,22 +535,50 @@ button {
 /*** tablet 960 ******************************/
 @media screen and (min-width: 960px) {
     body {
-        font-size: 2.25em;
-        line-height: 2.5em;
-        background-position: top 19em center;
+        background-position: top 0 center,
+                             top 33em center;
     }
 
     #navLogo img {
-        width: 8em;
+        width: 5em;
     }
 
     .icon {
-        width: 3.75rem;
+        width: 2rem;
     }
 
     .tagLine {
-        margin: 20em auto 10em;
-        width: 75vw;
+        margin: 39em auto 31em;
+        width: 60vw;
+    }
+
+    #maskBraPanty {
+        max-width: 60vw;
+        margin: 2em auto;
+    }
+        #maskBraPanty img {
+            width: 30vw;
+        }
+        #maskBraPanty h1 {
+            font-size: 3em;
+        }
+
+    li {
+        font-size: 1.25em;
+    }
+
+    .imgText {
+        max-width: 60vw;
+        margin: 0.75em auto 1.5em 0.75em;
+    }
+
+    .requestBox {
+        max-width: 60vw;
+    }
+
+    #requestModal {
+        bottom: 7em;
+        max-width: 60vw;
     }
 }
 
@@ -516,9 +586,60 @@ button {
 /*** old laptop / iPad 1024 ******************************/
 @media screen and (min-width: 1024px) {
     body {
+        font-size: 1.5em;
+        background-position: top 0 center,
+                             top 30em center;
+    }
+
+    #navLogo img {
+        width: 6em;
+    }
+
+    .icon {
+        width: 2.75rem;
+    }
+
+    .tagLine {
+        margin: 36em auto 26em;
+        width: 60vw;
+    }
+
+    #maskBraPanty {
+        max-width: 60vw;
+        margin: auto;
+    }
+
+    #maskBraPanty img {
+        width: 40vw;
+        padding: 2em;
+        margin: auto;
+    }
+
+    #maskBraPanty h1 {
         font-size: 2.5em;
-        line-height: 2.75em;
-        background-position: top 19em center;
+    }
+
+    .imgText {
+        max-width: 60vw;
+        margin: 0.75em auto 1.5em 0.75em;
+    }
+
+    .requestBox {
+        max-width: 60vw;
+    }
+
+    #requestModal {
+        bottom: 7em;
+        max-width: 60vw;
+    }
+} 
+
+/*** laptop 1440 ********************************/
+@media screen and (min-width: 1440px) {	
+    body {
+        font-size: 1.75em;
+        background-position: top 0 center,
+                             top 36em center;
     }
 
     #navLogo img {
@@ -526,34 +647,48 @@ button {
     }
 
     .icon {
-        width: 3.75rem;
+        width: 3rem;
     }
 
     .tagLine {
-        margin: 20em auto 10em;
-        width: 75vw;
+        margin: 42.5em auto 33em;
+        width: 50vw;
     }
 
     #maskBraPanty {
-        max-width: 70vw;
-        margin: auto;
+        max-width: 60vw;
     }
-        #maskBraPanty img {
-            width: 50vw;
-            padding: 2em;
-            margin: auto;
-        }
-        #maskBraPanty h1 {
-            font-size: 2em;
-        }
+
+    #maskBraPanty img {
+        width: 35vw;
+    }
+
+    #maskBraPanty h1 {
+        font-size: 3em;
+    }
+
+    .imgText {
+        max-width: 50vw;
+        margin: 0.75em auto 1.5em 0.75em;
+    }
+
+    .requestBox {
+        max-width: 50vw;
+    }
+
+    #requestModal {
+        bottom: 7em;
+        max-width: 50vw;
+    }
 } 
 
-/*** laptop 1440 ********************************/
-@media screen and (min-width: 1280px) {	
+/*** desktop 1920 ********************************/
+@media screen and (min-width: 1920px) {	
     body {
-        font-size: 3em;
-        line-height: 3.25em;
-        background-position: top 21em center;
+        font-size: 4em;
+        line-height: 4.25em;
+        background-position: top 0 center,
+                         top 17em center;
     }
 
     #navLogo img {
@@ -583,11 +718,6 @@ button {
         }
 } 
 
-/*** desktop 1920 ********************************
-@media screen and (min-width: 1920px) {	
-
-} 
-*/
 
 /*** 27-inch iMac 2560 ********************************
 @media screen and (min-width: 2560px) {	
