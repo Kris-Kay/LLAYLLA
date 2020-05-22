@@ -70,8 +70,8 @@ body {
     line-height: 1.5em;
     letter-spacing: .1px;
 
-    background: url(img/photos/peach-bra-hanger-LLAYLLA.jpg),
-                url(img/pattern-no-SE-LLAYLLA.svg);
+    background: url(../img/photos/peach-bra-hanger-LLAYLLA.jpg),
+                url(../img/pattern-no-SE-LLAYLLA.svg);
     background-repeat: no-repeat;
     background-size: 100% auto,
                      95% auto;
