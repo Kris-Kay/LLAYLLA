@@ -44,8 +44,8 @@ html.dark {
     --textBg: #003a4c;
     --textBgDarker: #003a4c;
     --text: #ffe4d7;
-    --h1: #ee6533;
-    --h2: #f28b66;
+    --h1: #ea3e00;
+    --h2: #ea3e00;
     --h3: #ffd2bc;
     --h4: #ffd2bc;
     --h5: #ffd2bc; 
@@ -54,7 +54,7 @@ html.dark {
     --btn: #ee6533;
     --btnText: #ffd2bc;
     --link: #ee6533;
-    --boxShdw: #ffd2bc44;
+    --boxShdw: #ffd2bc22;
 
     background-color: var(--bg);
 } 
@@ -70,7 +70,7 @@ body {
     line-height: 1.5em;
     letter-spacing: .1px;
 
-    background: url(/img/photos/peachy-bra-05-LLAYLLA),
+    background: url(/img/photos/peach-bra-hanger-LLAYLLA.jpg),
                 url(/img/pattern-no-SE-LLAYLLA.svg);
     background-repeat: no-repeat;
     background-size: 100% auto,
@@ -89,7 +89,7 @@ body.dark {
     line-height: 1.5em;
     letter-spacing: .1px;
 
-    background: url(/img/photos/peachy-bra-05-LLAYLLA),
+    background: url(/img/photos/peach-bra-hanger-LLAYLLA.jpg),
                 url(/img/pattern-peach-no-SE-LLAYLLA.svg);
     background-repeat: no-repeat;
     background-size: 100% auto,
@@ -218,7 +218,9 @@ button {
     #navLogo img {
         width: 3em;
     }
-
+.navLogo.hidden {
+    display: none;
+}
 
 /*** MAIN ***/
 .icon {
@@ -240,10 +242,14 @@ button {
     width: 80vw;
 }
 
-#tagWordLogo {
+.tagWordLogo {
     width: 10em;
     display: flex;
     padding: 0 0 0.5em 0;
+}
+
+.tagWordLogo.hidden {
+    display: none;
 }
 
 #maid {
@@ -340,7 +346,7 @@ button {
     }
 
 .imgText {
-    margin: 0.75em 0.75em 1.5em 0.75em;
+    margin: 0.75em 1.5em 1.5em 0.75em;
     background-color: var(--textBg);
     padding: 1.5em;
     border-radius: 1em;

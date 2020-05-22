@@ -15,14 +15,19 @@
     
 <!--NAV--> 
     <nav id="topNav">
-        <button type="button" id="navLogo"><img id="navLogoImg" src="img/logo-blue-noWord-peachBg-LLAYLLA.svg" alt="click to toggle light/dark mode"></button>
+        <button type="button" id="navLogo">
+          <img class="navLogo light" src="img/logo-blue-noWord-peachBg-LLAYLLA.svg" alt="click to toggle light/dark mode">
+          <img class="navLogo dark hidden" src="img/logo-peach-noWord-blueBg-LLAYLLA.svg" alt="click to toggle light/dark mode">
+        </button>
     </nav>
 
 <!--MAIN--> 
     <main id="main">
       
       <div class="tagLine">
-        <img src="img/logo-word-only-blue.svg" id="tagWordLogo"><h2>seamlessly weaves smart textiles and wearable tech into design forward luxury apparel.</h2>
+        <img src="img/logo-word-only-blue.svg" class="tagWordLogo light">
+        <img src="img/logo-word-only-peach.svg" class="tagWordLogo dark hidden">
+        <h2>seamlessly weaves smart textiles and wearable tech into design forward luxury apparel.</h2>
       </div>
 
       <img id="maid" src="img/photos/maid-01-LLAYLLA">
@@ -80,7 +85,7 @@
         </div>
 
         <div class="slide">
-            <img src="img/photos/peachy-bra-4-LLAYLLA.jpg">
+            <img src="img/photos/peach-bra-iteration-LLAYLLA.jpg">
             <p id="sild3Text" class="imgText">This is why we are dedicated to thoroughly testing all of our prototypes and reiterating our designs until they exceed all expectations in both form and function.</p>
         </div>
       </article>
