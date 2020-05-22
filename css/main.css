@@ -19,8 +19,8 @@ Red fade: #f28b66 */
 
 /* Light mode */
 html {
-    --bg: #ffe4d7;
-    --textBg: #ffdbc9;
+    --bg: #ffffff;
+    --textBg: #ffe4d7;
     --textBgDarker: #ffd2bc;
     --text: #003a4c;
     --h1: #ee6533;
@@ -35,15 +35,30 @@ html {
     --link: #ee6533;
     --boxShdw: #003a4c44;
 
-    background-color: var(--color-bg);
+    background-color: var(--bg);
 }
 
 /* Dark mode  */
-/* html.dark {
+html.dark {
+    --bg: #003a4c;
+    --textBg: #003a4c;
+    --textBgDarker: #003a4c;
+    --text: #ffe4d7;
+    --h1: #ee6533;
+    --h2: #f28b66;
+    --h3: #ffd2bc;
+    --h4: #ffd2bc;
+    --h5: #ffd2bc; 
+    --footBg: #003a4c;
+    --footText: #ffe4d7;
+    --btn: #ee6533;
+    --btnText: #ffd2bc;
+    --link: #ee6533;
+    --boxShdw: #ffd2bc44;
 
     background-color: var(--bg);
 } 
-*/
+
 
 body {
     --font-head: 'Lexend Deca', sans-serif;
@@ -57,6 +72,26 @@ body {
 
     background: url(/img/photos/peachy-bra-05-LLAYLLA),
                 url(/img/pattern-no-SE-LLAYLLA.svg);
+    background-repeat: no-repeat;
+    background-size: 100% auto,
+                     95% auto;
+    background-position: top 0 center,
+                         top 14.5em center;
+    width: 100%;
+}
+
+body.dark {
+    --font-head: 'Lexend Deca', sans-serif;
+    --font-body: 'Jost', sans-serif;
+
+    position: relative;
+    /* overflow: hidden; */
+    font-size: 1em;
+    line-height: 1.5em;
+    letter-spacing: .1px;
+
+    background: url(/img/photos/peachy-bra-05-LLAYLLA),
+                url(/img/pattern-peach-no-SE-LLAYLLA.svg);
     background-repeat: no-repeat;
     background-size: 100% auto,
                      95% auto;
@@ -144,10 +179,6 @@ button {
     background: transparent;
     border: none;
     outline: 0;
-}
-
-.hidden {
-    display: none;
 }
 
 
@@ -256,6 +287,9 @@ button {
     #maskBox img {
         justify-self: center;
     }
+.mask.hidden {
+    display: none;
+}
 
 #braBox {
     grid-area: bra;
@@ -264,7 +298,9 @@ button {
     #braBox img {
         justify-self: center;
     }
-
+.bra.hidden {
+    display: none;
+}
 #pantyBox {
     grid-area: pan;
     display: grid;
@@ -272,6 +308,10 @@ button {
     #pantyBox img {
         justify-self: center;
     }
+
+.panty.hidden {
+        display: none;
+}
 
 #mbpText {
     grid-area: text;
@@ -642,6 +682,10 @@ button {
                              top 36em center;
     }
 
+    #navLogo {
+        padding: 2em;
+    }
+
     #navLogo img {
         width: 8em;
     }
@@ -660,7 +704,7 @@ button {
     }
 
     #maskBraPanty img {
-        width: 35vw;
+        width: 30vw;
     }
 
     #maskBraPanty h1 {
@@ -668,17 +712,26 @@ button {
     }
 
     .imgText {
-        max-width: 50vw;
-        margin: 0.75em auto 1.5em 0.75em;
+        max-width: 55vw;
+        margin: 1em auto 1.5em 1em;
     }
 
     .requestBox {
-        max-width: 50vw;
+        max-width: 55vw;
     }
 
     #requestModal {
         bottom: 7em;
-        max-width: 50vw;
+        max-width: 55vw;
+    }
+
+    #foot {
+        padding: 1em;
+    }
+
+    /*carousel*/
+    .slide { 
+        width: 70%;
     }
 } 
 

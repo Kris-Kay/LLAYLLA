@@ -15,7 +15,7 @@
     
 <!--NAV--> 
     <nav id="topNav">
-        <button type="button" id="navLogo"><img src="img/logo-blue-noWord-peachBg-LLAYLLA.svg" alt="click to toggle light/dark mode"></button>
+        <button type="button" id="navLogo"><img id="navLogoImg" src="img/logo-blue-noWord-peachBg-LLAYLLA.svg" alt="click to toggle light/dark mode"></button>
     </nav>
 
 <!--MAIN--> 
@@ -31,7 +31,9 @@
         <h1 id="mbpTitle">What can wearable tech offer you?</h1>
 
         <div id="maskBox">
-          <img src="img/mask-blue-LLAYLLA.svg">
+          <img src="img/mask-blue-LLAYLLA.svg" class="mask light">
+          <img src="img/mask-peach-LLAYLLA.svg" class="mask dark hidden">
+
           <ul>
             <li>✧ Anti-microbial and self-cleaning fabrics</li>
             <li>✧ UV detecting and neutralize garments</li>
@@ -40,7 +42,8 @@
         </div>
 
         <div id="braBox">
-          <img src="img/bra-blue-LLAYLLA.svg">
+          <img src="img/bra-blue-LLAYLLA.svg" class="bra light">
+          <img src="img/bra-peach-LLAYLLA.svg" class="bra dark hidden">
           <ul>
             <li>✧ Detailed sleep and activity data</li>
             <li>✧ Made-to-measure knit structures for targeted cushioning or compression</li>
@@ -50,7 +53,9 @@
         </div>
 
         <div id="pantyBox">
-          <img src="img/panty-blue-LLAYLLA.svg">
+          <img src="img/panty-blue-LLAYLLA.svg" class="panty light">
+          <img src="img/panty-peach-LLAYLLA.svg" class="panty dark hidden">
+
           <ul>
             <li>✧ Environment adaptive heating</li>
             <li>✧ Real time fertility tracking</li>
