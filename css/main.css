@@ -7,7 +7,7 @@
 
 Dark blue main: #003a4c
 Dark blue med: #336170
-Dark blue fade: #668994
+Dark blue darker: #002e3d
 
 Peach main: #ffd2bc
 Peach med:  #ffdbc9
@@ -20,19 +20,19 @@ Red fade: #f28b66 */
 /* Light mode */
 html {
     --bg: #ffffff;
-    --textBg: #ffe4d7;
+    --textBg: #ffdbc9;
     --textBgDarker: #ffd2bc;
     --text: #003a4c;
-    --h1: #ee6533;
-    --h2: #f28b66;
+    --h1: #ea3e00;
+    --h2: #ea3e00;
     --h3: #003a4c;
     --h4: #003a4c;
     --h5: #003a4c; 
     --footBg: #003a4c;
     --footText: #ffe4d7;
     --btn: #003a4c;
-    --btnText: #f28b66;
-    --link: #ee6533;
+    --btnText: #ea3e00;
+    --link: #ea3e00;
     --boxShdw: #003a4c44;
 
     background-color: var(--bg);
@@ -41,8 +41,8 @@ html {
 /* Dark mode  */
 html.dark {
     --bg: #003a4c;
-    --textBg: #003a4c;
-    --textBgDarker: #003a4c;
+    --textBg: #002e3d;
+    --textBgDarker: #002e3d;
     --text: #ffe4d7;
     --h1: #ea3e00;
     --h2: #ea3e00;
@@ -234,7 +234,7 @@ button {
 }
 
 .tagLine {
-    background-color: var(--textBg);
+    background-color: var(--textBgDarker);
     padding: 2em;
     border-radius: 1em;
     box-shadow: 0.5em 0.5em 0.75em var(--boxShdw); 
@@ -353,6 +353,10 @@ button {
     box-shadow: 0.5em 0.5em 0.75em var(--boxShdw); 
 }
 
+#tanga {
+    width: 100%;
+    margin: 1em auto;
+}
 /*Request*/
 .requestBox {
     background-color: var(--textBg);
@@ -475,6 +479,13 @@ button {
                              top 15em center;
     }
 
+    body.dark {
+        font-size: 1.1em;
+        line-height: 1.25em;
+        background-position: top 0 center,
+                             top 15em center;
+    }
+
     #navLogo img {
         width: 4em;
     }
@@ -502,6 +513,13 @@ button {
 /*** phone landscape 425 **************************/
 @media screen and (min-width: 425px) {
     body {
+        font-size: 1.1em;
+        line-height: 1.25em;
+        background-position: top 0 center,
+                             top 17em center;
+    }
+
+    body.dark {
         font-size: 1.1em;
         line-height: 1.25em;
         background-position: top 0 center,
@@ -542,6 +560,13 @@ button {
                              top 27em center;
     }
 
+    body.dark {
+        font-size: 1.25em;
+        line-height: 1.5em;
+        background-position: top 0 center,
+                             top 27em center;
+    }
+
     #navLogo img {
         width: 5em;
     }
@@ -560,10 +585,10 @@ button {
         margin: 2em auto;
     }
         #maskBraPanty img {
-            width: 40vw;
+            width: 35vw;
         }
         #maskBraPanty h1 {
-            font-size: 2.25em;
+            font-size: 2.75em;
         }
 
     .imgText {
@@ -587,6 +612,11 @@ button {
 /*** tablet 960 ******************************/
 @media screen and (min-width: 960px) {
     body {
+        background-position: top 0 center,
+                             top 33em center;
+    }
+
+    body.dark {
         background-position: top 0 center,
                              top 33em center;
     }
@@ -643,6 +673,12 @@ button {
                              top 30em center;
     }
 
+    body.dark {
+        font-size: 1.5em;
+        background-position: top 0 center,
+                             top 30em center;
+    }
+
     #navLogo img {
         width: 6em;
     }
@@ -654,6 +690,11 @@ button {
     .tagLine {
         margin: 36em auto 26em;
         width: 60vw;
+    }
+
+    #maid {
+        width: 60vw;
+        display: grid;
     }
 
     #maskBraPanty {
@@ -694,6 +735,16 @@ button {
                              top 36em center;
     }
 
+    body.dark {
+        font-size: 1.75em;
+        background-position: top 0 center,
+                             top 36em center;
+    }
+
+    li {
+        font-size: 1.8em;
+    }
+
     #navLogo {
         padding: 2em;
     }
@@ -709,6 +760,10 @@ button {
     .tagLine {
         margin: 42.5em auto 33em;
         width: 50vw;
+    }
+
+    #maid {
+        width: 60vw;
     }
 
     #maskBraPanty {
@@ -750,44 +805,145 @@ button {
 /*** desktop 1920 ********************************/
 @media screen and (min-width: 1920px) {	
     body {
-        font-size: 4em;
-        line-height: 4.25em;
+        font-size: 2em;
         background-position: top 0 center,
-                         top 17em center;
+                             top 42em center;
+    }
+
+    body.dark {
+        font-size: 2em;
+        background-position: top 0 center,
+                             top 42em center;
+    }
+
+    #navLogo {
+        padding: 2em;
     }
 
     #navLogo img {
-        width: 11em;
+        width: 10em;
     }
 
     .icon {
-        width: 3.75rem;
+        width: 3.5rem;
     }
 
     .tagLine {
-        margin: 20em auto 15em;
-        width: 75vw;
+        margin: 50em auto 44em;
+        width: 50vw;
+    }
+
+    #maid {
+        width: 60vw;
     }
 
     #maskBraPanty {
-        max-width: 65vw;
-        margin: auto;
+        max-width: 60vw;
     }
-        #maskBraPanty img {
-            width: 45vw;
-            padding: 2em;
-            margin: auto;
-        }
-        #maskBraPanty h1 {
-            font-size: 2em;
-        }
+
+    #maskBraPanty img {
+        width: 30vw;
+    }
+
+    #maskBraPanty h1 {
+        font-size: 3em;
+    }
+
+    .imgText {
+        max-width: 55vw;
+        margin: 1em auto 1.5em 1em;
+    }
+
+    .requestBox {
+        max-width: 55vw;
+    }
+
+    #requestModal {
+        bottom: 7em;
+        max-width: 55vw;
+    }
+
+    #foot {
+        padding: 1em;
+    }
+
+    /*carousel*/
+    .slide { 
+        width: 70%;
+    }
 } 
 
 
-/*** 27-inch iMac 2560 ********************************
+/*** 27-inch iMac 2560 ********************************/
 @media screen and (min-width: 2560px) {	
+    body {
+        font-size: 3em;
+        background-position: top 0 center,
+                             top 38em center;
+    }
 
+    body.dark {
+        font-size: 3em;
+        background-position: top 0 center,
+                             top 38em center;
+    }
+
+    #navLogo {
+        padding: 4em;
+    }
+
+    #navLogo img {
+        width: 20em;
+    }
+
+    .icon {
+        width: 7rem;
+    }
+
+    .tagLine {
+        margin: 44em auto 40em;
+        width: 50vw;
+    }
+
+    #maid {
+        width: 60vw;
+    }
+
+    #maskBraPanty {
+        max-width: 60vw;
+    }
+
+    #maskBraPanty img {
+        width: 30vw;
+    }
+
+    #maskBraPanty h1 {
+        font-size: 3em;
+    }
+
+    .imgText {
+        max-width: 55vw;
+        margin: 1em auto 1.5em 1em;
+    }
+
+    .requestBox {
+        max-width: 55vw;
+    }
+
+    #requestModal {
+        bottom: 7em;
+        max-width: 55vw;
+    }
+
+    #foot {
+        padding: 2em;
+    }
+
+    /*carousel*/
+    .slide { 
+        width: 70%;
+    }
 } 
-*/
+
 
 
