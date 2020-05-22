@@ -212,12 +212,13 @@ button {
     grid-area: logo;
     justify-self: start;
     align-self: start;
-    position: fixed;
+
     padding: 0.75em;
 }
     #navLogo img {
         width: 3em;
     }
+
 .navLogo.hidden {
     display: none;
 }
@@ -554,15 +555,13 @@ button {
 /*** tablet 760 ******************************/
 @media screen and (min-width: 760px) {
     body {
-        font-size: 1.25em;
-        line-height: 1.5em;
+        font-size: 1.2em;
         background-position: top 0 center,
                              top 27em center;
     }
 
     body.dark {
-        font-size: 1.25em;
-        line-height: 1.5em;
+        font-size: 1.2em;
         background-position: top 0 center,
                              top 27em center;
     }
@@ -612,11 +611,13 @@ button {
 /*** tablet 960 ******************************/
 @media screen and (min-width: 960px) {
     body {
+        font-size: 1.3em;
         background-position: top 0 center,
                              top 33em center;
     }
 
     body.dark {
+        font-size: 1.3em;
         background-position: top 0 center,
                              top 33em center;
     }
@@ -668,13 +669,13 @@ button {
 /*** Laptop / iPad 1024 ******************************/
 @media screen and (min-width: 1024px) {
     body {
-        font-size: 1.5em;
+        font-size: 1.4em;
         background-position: top 0 center,
                              top 30em center;
     }
 
     body.dark {
-        font-size: 1.5em;
+        font-size: 1.4em;
         background-position: top 0 center,
                              top 30em center;
     }
@@ -730,13 +731,13 @@ button {
 /*** laptop 1440 ********************************/
 @media screen and (min-width: 1440px) {	
     body {
-        font-size: 1.5em;
+        font-size: 1.4em;
         background-position: top 0 center,
                              top 36em center;
     }
 
     body.dark {
-        font-size: 1.5em;
+        font-size: 1.4em;
         background-position: top 0 center,
                              top 36em center;
     }
@@ -805,13 +806,13 @@ button {
 /*** desktop 1920 ********************************/
 @media screen and (min-width: 1920px) {	
     body {
-        font-size: 2em;
+        font-size: 1.5em;
         background-position: top 0 center,
                              top 42em center;
     }
 
     body.dark {
-        font-size: 2em;
+        font-size: 1.5em;
         background-position: top 0 center,
                              top 42em center;
     }
@@ -877,13 +878,13 @@ button {
 /*** 27-inch iMac 2560 ********************************/
 @media screen and (min-width: 2560px) {	
     body {
-        font-size: 3em;
+        font-size: 2.5em;
         background-position: top 0 center,
                              top 38em center;
     }
 
     body.dark {
-        font-size: 3em;
+        font-size: 2.5em;
         background-position: top 0 center,
                              top 38em center;
     }
