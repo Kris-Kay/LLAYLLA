@@ -85,7 +85,6 @@ body.dark {
     --font-body: 'Jost', sans-serif;
 
     position: relative;
-    /* overflow: hidden; */
     font-size: 1em;
     line-height: 1.5em;
     letter-spacing: .1px;
@@ -236,7 +235,7 @@ button {
     background-color: var(--textBg);
     padding: 2em;
     border-radius: 1em;
-    box-shadow: 0.75em 0.75em 1.25em var(--boxShdw); 
+    box-shadow: 0.5em 0.5em 0.75em var(--boxShdw); 
     margin: 17em auto 3em;
     width: 80vw;
 }
@@ -258,7 +257,7 @@ button {
     margin: 2em 0.75em;
     padding: 1.5em;
     border-radius: 1em;
-    box-shadow: 0.75em 0.75em 1.25em var(--boxShdw); 
+    box-shadow: 0.5em 0.5em 0.75em var(--boxShdw); 
 
     display: grid;
     grid-template-columns: auto;
@@ -345,7 +344,7 @@ button {
     background-color: var(--textBg);
     padding: 1.5em;
     border-radius: 1em;
-    box-shadow: 0.5em 0.5em 2em var(--boxShdw); 
+    box-shadow: 0.5em 0.5em 0.75em var(--boxShdw); 
 }
 
 /*Request*/
@@ -354,7 +353,7 @@ button {
     margin: 0 0.75em 2em 0.75em;
     padding: 1.5em 1.5em 1em 1.5em;
     border-radius: 1em;
-    box-shadow: 0.75em 0.75em 1.25em var(--boxShdw); 
+    box-shadow: 0.5em 0.5em 0.75em var(--boxShdw); 
 }
 
 .request {
@@ -366,7 +365,7 @@ button {
         margin: 1em auto;
         padding: 1em;
         border-radius: 1em;
-        box-shadow: 0.75em 0.75em 1.25em var(--boxShdw); 
+        box-shadow: 0.5em 0.5em 0.75em var(--boxShdw); 
     }
 
 #requestModal {
@@ -382,7 +381,7 @@ button {
     margin: auto;
     padding: 1.5em;
     border-radius: 1em;
-    box-shadow: 0.75em 0.75em 1.25em var(--boxShdw); 
+    box-shadow: 0.5em 0.5em 0.75em var(--boxShdw); 
 
     grid-template-columns: auto 3em;
     grid-template-rows: auto auto auto;
@@ -399,6 +398,10 @@ button {
     grid-area: x;
     align-self: start;
     justify-self: end;
+}
+
+.modalX.hidden {
+    display: none;
 }
 
 #modalIntro {
@@ -423,6 +426,9 @@ button {
     justify-self: end;
 }
 
+.copyBtn.hidden {
+    display: none;
+}
 
 /*FOOT*/
 #foot {
