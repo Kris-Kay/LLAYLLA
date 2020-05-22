@@ -89,8 +89,8 @@ body.dark {
     line-height: 1.5em;
     letter-spacing: .1px;
 
-    background: url(img/photos/peach-bra-hanger-LLAYLLA.jpg),
-                url(img/pattern-peach-no-SE-LLAYLLA.svg);
+    background: url(../img/photos/peach-bra-hanger-LLAYLLA.jpg),
+                url(../img/pattern-peach-no-SE-LLAYLLA.svg);
     background-repeat: no-repeat;
     background-size: 100% auto,
                      95% auto;
@@ -224,6 +224,20 @@ button {
 }
 
 /*** MAIN ***/
+main {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 100vh 100vh auto auto auto auto auto;
+    grid-template-areas: 
+        "."
+        "tag"
+        "maid"
+        "mbp"
+        "carou"
+        "tanga"
+        "requ";
+}
+
 .icon {
     width: 1.5rem;
 }
@@ -235,11 +249,13 @@ button {
 }
 
 .tagLine {
+    grid-area: tag;
+
     background-color: var(--textBgDarker);
     padding: 2em;
     border-radius: 1em;
     box-shadow: 0.5em 0.5em 0.75em var(--boxShdw); 
-    margin: 17em auto 3em;
+    /* margin: 17em auto 3em; */
     width: 80vw;
 }
 
@@ -254,12 +270,16 @@ button {
 }
 
 #maid {
+    grid-area: maid;
+
     margin: 1em auto;
     width: 100%;
 }
 
 /* Mask Bra Panty */
 #maskBraPanty {
+    grid-area: mbp;
+
     background-color: var(--textBg);
     margin: 2em 0.75em;
     padding: 1.5em;
@@ -326,6 +346,8 @@ button {
 
 /*carousel*/
 .carousel {
+    grid-area: carou;
+
     display: flex;
     scroll-snap-type: x mandatory;
     overflow-x: scroll;
@@ -355,11 +377,14 @@ button {
 }
 
 #tanga {
+    grid-area: tanga;
+
     width: 100%;
     margin: 1em auto;
 }
 /*Request*/
 .requestBox {
+    grid-area: requ;
     background-color: var(--textBg);
     margin: 0 0.75em 2em 0.75em;
     padding: 1.5em 1.5em 1em 1.5em;
