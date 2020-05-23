@@ -226,10 +226,12 @@ button {
 }
 
 /*** MAIN ***/
-main {
+#main {
+    grid-area: main;  
+
     display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: 50vh auto auto auto auto auto auto;
+    grid-template-columns: 100vw;
+    grid-template-rows: 45vh auto auto auto auto auto auto;
     grid-template-areas: 
         "."
         "tag"
@@ -238,37 +240,33 @@ main {
         "carou"
         "tanga"
         "requ";
-}
 
-.icon {
-    width: 1.5rem;
-}
-
-#main {
-    grid-area: main;  
-    font-display: grid; 
-    justify-items: center; 
+        justify-items: center; 
 }
 
 .tagLine {
     grid-area: tag;
 
-    background-color: var(--textBgDarker);
+    width: 80vw;
     padding: 2em;
+    margin: 0 auto 3em auto;
     border-radius: 1em;
     box-shadow: 0.5em 0.5em 0.75em var(--boxShdw); 
-    margin: 0 auto 3em auto;
-    width: 80vw;
+    background-color: var(--textBgDarker);
 }
 
 .tagWordLogo {
-    width: 10em;
     display: flex;
+    width: 10em;
     padding: 0 0 0.5em 0;
 }
 
 .tagWordLogo.hidden {
     display: none;
+}
+
+.icon {
+    width: 1.5rem;
 }
 
 #maid {
@@ -385,6 +383,7 @@ main {
     width: 100%;
     margin: 1em auto;
 }
+
 /*Request*/
 .requestBox {
     grid-area: requ;
@@ -505,14 +504,26 @@ main {
         font-size: 1.1em;
         line-height: 1.25em;
         background-position: top 0 center,
-                             top 15em center;
+                             top 16em center;
     }
 
     body.dark {
         font-size: 1.1em;
         line-height: 1.25em;
         background-position: top 0 center,
-                             top 15em center;
+                             top 16em center;
+    }
+
+    #main {
+        grid-template-rows: 50vh auto auto auto auto auto auto;
+    }
+    
+    .tagLine {
+        width: 80vw;
+        padding: 2em;
+        margin: 0 auto 4em auto;
+        border-radius: 1em;
+        box-shadow: 0.5em 0.5em 0.75em var(--boxShdw); 
     }
 
     #navLogo img {
@@ -521,10 +532,6 @@ main {
 
     .icon {
         width: 1.75rem;
-    }
-
-    .tagLine {
-        margin: 0 auto 3em auto;
     }
 
     #maskBraPanty {
@@ -545,14 +552,24 @@ main {
         font-size: 1.1em;
         line-height: 1.25em;
         background-position: top 0 center,
-                             top 17em center;
+                             top 18em center;
     }
 
     body.dark {
         font-size: 1.1em;
         line-height: 1.25em;
         background-position: top 0 center,
-                             top 17em center;
+                             top 18em center;
+    }
+
+    #main {
+        grid-template-rows: 55vh auto auto auto auto auto auto;
+    }
+    
+    .tagLine {
+        width: 80vw;
+        padding: 2em;
+        margin: 0 auto 8em auto;
     }
 
     #navLogo img {
@@ -561,10 +578,6 @@ main {
 
     .icon {
         width: 1.75rem;
-    }
-
-    .tagLine {
-        margin: 0 auto 7em auto;
     }
 
     #maskBraPanty {
@@ -580,115 +593,35 @@ main {
 }
 
 
-/*** tablet 760 ******************************/
-@media screen and (min-width: 760px) {
+/*** tablet 768 ******************************/
+@media screen and (min-width: 768px) {
     body {
         font-size: 1.2em;
         background-position: top 0 center,
-                             top 27em center;
+                             top 30em center;
     }
 
     body.dark {
         font-size: 1.2em;
         background-position: top 0 center,
-                             top 27em center;
+                             top 30em center;
     }
 
-    #navLogo img {
-        width: 5em;
-    }
-
-    main {
-        display: grid;
-        grid-template-columns: 100%;
-        grid-template-rows: 70vh auto auto auto auto auto auto;
-        grid-template-areas: 
-            "."
-            "tag"
-            "maid"
-            "mbp"
-            "carou"
-            "tanga"
-            "requ";
-    }
-
-    .icon {
-        width: 2rem;
+    #main {
+        grid-template-rows: 110vh auto auto auto auto auto auto;
     }
 
     .tagLine {
-        margin: 2em auto 24em auto;
-        width: 65vw;
-    }
-
-    #maskBraPanty {
-        max-width: 60vw;
-        margin: 2em auto;
-    }
-        #maskBraPanty img {
-            width: 35vw;
-        }
-        #maskBraPanty h1 {
-            font-size: 2.75em;
-        }
-
-    .imgText {
-        max-width: 70vw;
-        margin: 0.75em auto 1.5em 0.75em;
-    }
-
-    .requestBox {
-        max-width: 70vw;
-        margin: 0 auto 2em auto;
-    }
-
-    #requestModal {
-        bottom: 7em;
-        max-width: 70vw;
-        margin: auto;
-    }
-}
-
-
-/*** tablet 960 ******************************/
-@media screen and (min-width: 960px) {
-    body {
-        font-size: 1.3em;
-        background-position: top 0 center,
-                             top 33em center;
-    }
-
-    body.dark {
-        font-size: 1.3em;
-        background-position: top 0 center,
-                             top 33em center;
-    }
-
-    #navLogo img {
-        width: 5em;
-    }
-
-    main {
-        display: grid;
-        grid-template-columns: 100%;
-        grid-template-rows: 90vh auto auto auto auto auto auto;
-        grid-template-areas: 
-            "."
-            "tag"
-            "maid"
-            "mbp"
-            "carou"
-            "tanga"
-            "requ";
-    }
-
-    .icon {
-        width: 2rem;
-    }
-
-    .tagLine {
-        margin: 2em auto 24em auto;
         width: 60vw;
+        margin: 0 auto 26em auto;
+    }
+
+    #navLogo img {
+        width: 5em;
+    }
+
+    .icon {
+        width: 2rem;
     }
 
     #maskBraPanty {
@@ -699,12 +632,8 @@ main {
             width: 30vw;
         }
         #maskBraPanty h1 {
-            font-size: 3em;
+            font-size: 2.75em;
         }
-
-    li {
-        font-size: 1.25em;
-    }
 
     .imgText {
         max-width: 60vw;
@@ -713,11 +642,79 @@ main {
 
     .requestBox {
         max-width: 60vw;
+        margin: 0 auto 2em auto;
     }
 
     #requestModal {
         bottom: 7em;
         max-width: 60vw;
+        margin: auto;
+    }
+}
+
+
+/*** tablet 960 ******************************/
+@media screen and (min-width: 960px) {
+    body {
+        font-size: 1.2em;
+        background-position: top 0 center,
+                             top 35em center;
+    }
+
+    body.dark {
+        font-size: 1.2em;
+        background-position: top 0 center,
+                             top 35em center;
+    }
+
+    #main {
+        grid-template-rows: 120vh auto auto auto auto auto auto;
+    }
+
+    .tagLine {
+        width: 55vw;
+        margin: 0 auto 33em auto;
+    }
+
+    #maid {
+        width: 55vw;
+    }
+
+    #navLogo img {
+        width: 5em;
+    }
+
+    .icon {
+        width: 2rem;
+    }
+
+    #maskBraPanty {
+        max-width: 55vw;
+        margin: 2em auto;
+    }
+        #maskBraPanty img {
+            width: 25vw;
+        }
+        #maskBraPanty h1 {
+            font-size: 3em;
+        }
+
+    li {
+        font-size: 1.2em;
+    }
+
+    .imgText {
+        max-width: 55vw;
+        margin: 0.75em auto 1.5em 0.75em;
+    }
+
+    .requestBox {
+        max-width: 55vw;
+    }
+
+    #requestModal {
+        bottom: 7em;
+        max-width: 55vw;
     }
 }
 
