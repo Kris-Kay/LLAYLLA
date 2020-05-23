@@ -69,15 +69,6 @@ body {
     font-size: 1em;
     line-height: 1.5em;
     letter-spacing: .1px;
-
-    background: url(../img/photos/peach-bra-hanger-LLAYLLA.jpg),
-                url(../img/pattern-no-SE-LLAYLLA.svg);
-    background-repeat: no-repeat;
-    background-size: 100% auto,
-                     95% auto;
-    background-position: top 0 center,
-                         top 14.5em center;
-    width: 100%;
 }
 
 body.dark {
@@ -89,15 +80,6 @@ body.dark {
     font-size: 1em;
     line-height: 1.5em;
     letter-spacing: .1px;
-
-    background: url(../img/photos/peach-bra-hanger-LLAYLLA.jpg),
-                url(../img/pattern-peach-no-SE-LLAYLLA.svg);
-    background-repeat: no-repeat;
-    background-size: 100% auto,
-                     95% auto;
-    background-position: top 0 center,
-                         top 14.5em center;
-    width: 100%;
 }
 
 p {
@@ -116,7 +98,7 @@ time {
 li {
     font-family: var(--font-body);
     font-weight: 400;
-    line-height: 1.5;
+    line-height: 1.25;
     letter-spacing: .2px;
     color: var(--text);
     margin: 1em 0;
@@ -140,7 +122,7 @@ h1 {
 
 h2 {
     font-family: var(--font-body);
-    font-size: 1.5em;
+    font-size: 1.25em;
     line-height: 1.25em;
     letter-spacing: .5px;
     font-weight: 200;
@@ -195,10 +177,14 @@ button {
 
 
 /*** NAV ***/
-#topNav {
+#topNavBox {
     grid-area: nav;
 
     position: relative;
+}
+
+#topNav {
+    position: absolute;
     width: 100%;
     top: 0em;
     left: 0em;
@@ -225,15 +211,18 @@ button {
     display: none;
 }
 
+#landHero {
+    width:100%;
+}
+
 /*** MAIN ***/
 #main {
     grid-area: main;  
 
     display: grid;
     grid-template-columns: 100vw;
-    grid-template-rows: 45vh auto auto auto auto auto auto;
+    grid-template-rows: repeat(6, auto);
     grid-template-areas: 
-        "."
         "tag"
         "maid"
         "mbp"
@@ -244,12 +233,28 @@ button {
         justify-items: center; 
 }
 
-.tagLine {
+#tagLineBox {
     grid-area: tag;
+    position: relative; 
+}
 
+.tagBg {
+    width: 95vw;
+    margin: auto;
+}
+
+.tagBg.hidden {
+    display: none;
+}
+
+#tagLine {
+    position: absolute;
+    top: 2em;
+    left: 0;
+    right: 0;
     width: 80vw;
     padding: 2em;
-    margin: 0 auto 3em auto;
+    margin: auto;
     border-radius: 1em;
     box-shadow: 0.5em 0.5em 0.75em var(--boxShdw); 
     background-color: var(--textBgDarker);
@@ -298,7 +303,7 @@ button {
 }
     #maskBraPanty img {
         width: 60vw;
-        padding: 1em;
+        padding: 1.5em;
         margin: auto;
     }
 
@@ -503,27 +508,15 @@ button {
     body {
         font-size: 1.1em;
         line-height: 1.25em;
-        background-position: top 0 center,
-                             top 16em center;
     }
 
     body.dark {
         font-size: 1.1em;
         line-height: 1.25em;
-        background-position: top 0 center,
-                             top 16em center;
-    }
-
-    #main {
-        grid-template-rows: 50vh auto auto auto auto auto auto;
     }
     
-    .tagLine {
-        width: 80vw;
-        padding: 2em;
-        margin: 0 auto 4em auto;
-        border-radius: 1em;
-        box-shadow: 0.5em 0.5em 0.75em var(--boxShdw); 
+    #tagLine {
+        width: 80vw; 
     }
 
     #navLogo img {
@@ -551,25 +544,15 @@ button {
     body {
         font-size: 1.1em;
         line-height: 1.25em;
-        background-position: top 0 center,
-                             top 18em center;
     }
 
     body.dark {
         font-size: 1.1em;
         line-height: 1.25em;
-        background-position: top 0 center,
-                             top 18em center;
     }
 
-    #main {
-        grid-template-rows: 55vh auto auto auto auto auto auto;
-    }
-    
-    .tagLine {
-        width: 80vw;
-        padding: 2em;
-        margin: 0 auto 8em auto;
+    #tagLine {
+        width: 80vw; 
     }
 
     #navLogo img {
@@ -597,31 +580,26 @@ button {
 @media screen and (min-width: 768px) {
     body {
         font-size: 1.2em;
-        background-position: top 0 center,
-                             top 30em center;
     }
 
     body.dark {
         font-size: 1.2em;
-        background-position: top 0 center,
-                             top 30em center;
     }
 
-    #main {
-        grid-template-rows: 110vh auto auto auto auto auto auto;
-    }
-
-    .tagLine {
-        width: 60vw;
-        margin: 0 auto 26em auto;
+    #tagLine {
+        width: 60vw; 
     }
 
     #navLogo img {
-        width: 5em;
+        width: 4.5em;
     }
 
     .icon {
         width: 2rem;
+    }
+
+    #maid {
+        max-width: 60vw;
     }
 
     #maskBraPanty {
@@ -657,23 +635,14 @@ button {
 @media screen and (min-width: 960px) {
     body {
         font-size: 1.2em;
-        background-position: top 0 center,
-                             top 35em center;
     }
 
     body.dark {
         font-size: 1.2em;
-        background-position: top 0 center,
-                             top 35em center;
     }
 
-    #main {
-        grid-template-rows: 120vh auto auto auto auto auto auto;
-    }
-
-    .tagLine {
-        width: 55vw;
-        margin: 0 auto 33em auto;
+    #tagLine {
+        width: 55vw; 
     }
 
     #maid {
@@ -723,37 +692,23 @@ button {
 @media screen and (min-width: 1024px) {
     body {
         font-size: 1.4em;
-        background-position: top 0 center,
-                             top 32em center;
     }
 
     body.dark {
         font-size: 1.4em;
-        background-position: top 0 center,
-                             top 32em center;
     }
 
     #navLogo img {
-        width: 6em;
+        width: 6.5em;
     }
 
-    main {
-        display: grid;
-        grid-template-columns: 100%;
-        grid-template-rows: 80vh auto auto auto auto auto auto;
-        grid-template-areas: 
-            "."
-            "tag"
-            "maid"
-            "mbp"
-            "carou"
-            "tanga"
-            "requ";
+    #tagLine {
+        width: 60vw; 
     }
 
-    .tagLine {
-        margin: 0 auto 21em auto;
-        width: 60vw;
+    .tagBg {
+        width: 80vw;
+        margin: auto;
     }
 
     .icon {
@@ -799,14 +754,10 @@ button {
 @media screen and (min-width: 1440px) {	
     body {
         font-size: 1.4em;
-        background-position: top 0 center,
-                             top 45em center;
     }
 
     body.dark {
         font-size: 1.4em;
-        background-position: top 0 center,
-                             top 45em center;
     }
 
     li {
@@ -816,32 +767,21 @@ button {
     #navLogo {
         padding: 2em;
     }
+        #navLogo img {
+            width: 8em;
+        }
 
-    #navLogo img {
-        width: 8em;
+    #tagLine {
+        width: 50vw; 
     }
 
-    main {
-        display: grid;
-        grid-template-columns: 100%;
-        grid-template-rows: 90vh auto auto auto auto auto auto;
-        grid-template-areas: 
-            "."
-            "tag"
-            "maid"
-            "mbp"
-            "carou"
-            "tanga"
-            "requ";
-    }
-
-    .tagLine {
-        margin: 0 auto 32em auto;
-        width: 50vw;
+    .tagBg {
+        width: 80vw;
+        margin: auto;
     }
 
     .icon {
-        width: 3rem;
+        width: 2.75rem;
     }
 
     #maid {
@@ -849,7 +789,7 @@ button {
     }
 
     #maskBraPanty {
-        max-width: 60vw;
+        max-width: 50vw;
     }
 
     #maskBraPanty img {
@@ -861,17 +801,17 @@ button {
     }
 
     .imgText {
-        max-width: 55vw;
+        max-width: 50vw;
         margin: 1em auto 1.5em 1em;
     }
 
     .requestBox {
-        max-width: 55vw;
+        max-width: 50vw;
     }
 
     #requestModal {
         bottom: 7em;
-        max-width: 55vw;
+        max-width: 50vw;
     }
 
     #foot {
@@ -888,41 +828,21 @@ button {
 @media screen and (min-width: 1920px) {	
     body {
         font-size: 1.5em;
-        background-position: top 0 center,
-                             top 55em center;
     }
 
     body.dark {
         font-size: 1.5em;
-        background-position: top 0 center,
-                             top 55em center;
     }
 
     #navLogo {
         padding: 2em;
     }
+        #navLogo img {
+            width: 10em;
+        }
 
-    #navLogo img {
-        width: 10em;
-    }
-
-    main {
-        display: grid;
-        grid-template-columns: 100%;
-        grid-template-rows: 100vh auto auto auto auto auto auto;
-        grid-template-areas: 
-            "."
-            "tag"
-            "maid"
-            "mbp"
-            "carou"
-            "tanga"
-            "requ";
-    }
-
-    .tagLine {
-        margin: 0 auto 40em auto;
-        width: 50vw;
+    #tagLine {
+        width: 40vw; 
     }
 
     .icon {
@@ -930,11 +850,11 @@ button {
     }
 
     #maid {
-        width: 60vw;
+        width: 40vw;
     }
 
     #maskBraPanty {
-        max-width: 60vw;
+        max-width: 40vw;
     }
 
     #maskBraPanty img {
@@ -942,21 +862,21 @@ button {
     }
 
     #maskBraPanty h1 {
-        font-size: 3em;
+        font-size: 3.5em;
     }
 
     .imgText {
-        max-width: 55vw;
+        max-width: 40vw;
         margin: 1em auto 1.5em 1em;
     }
 
     .requestBox {
-        max-width: 55vw;
+        max-width: 40vw;
     }
 
     #requestModal {
         bottom: 7em;
-        max-width: 55vw;
+        max-width: 40vw;
     }
 
     #foot {
@@ -974,41 +894,21 @@ button {
 @media screen and (min-width: 2560px) {	
     body {
         font-size: 2.5em;
-        background-position: top 0 center,
-                             top 45em center;
     }
 
     body.dark {
         font-size: 2.5em;
-        background-position: top 0 center,
-                             top 45em center;
     }
 
     #navLogo {
         padding: 4em;
     }
+        #navLogo img {
+            width: 17em;
+        }
 
-    #navLogo img {
-        width: 20em;
-    }
-
-    main {
-        display: grid;
-        grid-template-columns: 100%;
-        grid-template-rows: 90vh auto auto auto auto auto auto;
-        grid-template-areas: 
-            "."
-            "tag"
-            "maid"
-            "mbp"
-            "carou"
-            "tanga"
-            "requ";
-    }
-
-    .tagLine {
-        margin: 0 auto 30em auto;
-        width: 50vw;
+    #tagLine {
+        width: 40vw; 
     }
 
     .icon {
@@ -1016,11 +916,11 @@ button {
     }
 
     #maid {
-        width: 60vw;
+        width: 40vw;
     }
 
     #maskBraPanty {
-        max-width: 60vw;
+        max-width: 40vw;
     }
 
     #maskBraPanty img {
@@ -1032,17 +932,17 @@ button {
     }
 
     .imgText {
-        max-width: 55vw;
+        max-width: 40vw;
         margin: 1em auto 1.5em 1em;
     }
 
     .requestBox {
-        max-width: 55vw;
+        max-width: 40vw;
     }
 
     #requestModal {
         bottom: 7em;
-        max-width: 55vw;
+        max-width: 40vw;
     }
 
     #foot {
