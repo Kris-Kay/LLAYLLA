@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+
 
 @import url('https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&display=swap');
 
@@ -202,7 +202,7 @@ button {
     padding: 0.75em;
 }
     #navLogo img {
-        width: 3em;
+        width: 2em;
     }
 
 .navLogo.hidden {
@@ -222,10 +222,10 @@ button {
     grid-template-rows: repeat(6, auto);
     grid-template-areas: 
         "tag"
-        "maid"
+        "tanga"
         "mbp"
         "carou"
-        "tanga"
+        "maid"
         "requ";
 
         justify-items: center; 
@@ -234,6 +234,7 @@ button {
 #tagLineBox {
     grid-area: tag;
     position: relative; 
+    margin: 1em 0;
 }
 
 .tagBg {
@@ -253,8 +254,7 @@ button {
     width: 80vw;
     padding: 2em;
     margin: auto;
-    border-radius: 1em;
-    box-shadow: 0.5em 0.5em 0.75em var(--boxShdw); 
+    border-radius: 1em; 
     background-color: var(--textBgDarker);
 }
 
@@ -275,9 +275,14 @@ button {
 #maid {
     grid-area: maid;
 
-    margin: 1em auto;
+    margin: 2em auto;
     width: 100%;
 }
+
+#aboutLlay {
+    margin: 1em 0.75em;
+}
+
 
 /* Mask Bra Panty */
 #maskBraPanty {
@@ -287,7 +292,6 @@ button {
     margin: 2em 0.75em;
     padding: 1.5em;
     border-radius: 1em;
-    box-shadow: 0.5em 0.5em 0.75em var(--boxShdw); 
 
     display: grid;
     grid-template-columns: auto;
@@ -355,7 +359,7 @@ button {
     scroll-snap-type: x mandatory;
     overflow-x: scroll;
     align-items: flex-start;
-    margin: 2em auto;
+    margin: 2em auto 0 auto;
 }
 
 .slide { 
@@ -373,18 +377,17 @@ button {
 
 .imgText {
     /* width: 80%; */
-    margin: 0.75em 1.5em 1.5em 0.75em;
+    margin: 0.75em;
     background-color: var(--textBg);
     padding: 1.5em;
     border-radius: 1em;
-    box-shadow: 0.5em 0.5em 0.75em var(--boxShdw); 
 }
 
 #tanga {
     grid-area: tanga;
 
     width: 100%;
-    margin: 1em auto;
+    margin: 2em auto;
 }
 
 /*Request*/
@@ -394,7 +397,6 @@ button {
     margin: 0 0.75em 2em 0.75em;
     padding: 1.5em 1.5em 1em 1.5em;
     border-radius: 1em;
-    box-shadow: 0.5em 0.5em 0.75em var(--boxShdw); 
 }
 
 .request {
@@ -406,7 +408,6 @@ button {
         margin: 1em auto;
         padding: 1em;
         border-radius: 1em;
-        box-shadow: 0.5em 0.5em 0.75em var(--boxShdw); 
     }
 
 #requestModal {
@@ -422,7 +423,6 @@ button {
     margin: auto;
     padding: 1.5em;
     border-radius: 1em;
-    box-shadow: 0.5em 0.5em 0.75em var(--boxShdw); 
 
     grid-template-columns: auto 3em;
     grid-template-rows: auto auto auto;
@@ -518,7 +518,7 @@ button {
     }
 
     #navLogo img {
-        width: 4em;
+        width: 2.5em;
     }
 
     .icon {
@@ -554,7 +554,7 @@ button {
     }
 
     #navLogo img {
-        width: 4em;
+        width: 3em;
     }
 
     .icon {
@@ -696,8 +696,12 @@ button {
         font-size: 1.4em;
     }
 
+    #navLogo {
+        padding: 2em;
+    }
+
     #navLogo img {
-        width: 6.5em;
+        width: 6em;
     }
 
     #tagLine {
@@ -766,7 +770,7 @@ button {
         padding: 2em;
     }
         #navLogo img {
-            width: 8em;
+            width: 7em;
         }
 
     #tagLine {
@@ -836,7 +840,7 @@ button {
         padding: 2em;
     }
         #navLogo img {
-            width: 10em;
+            width: 8em;
         }
 
     #tagLine {
