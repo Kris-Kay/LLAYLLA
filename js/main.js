@@ -18,7 +18,7 @@ document.querySelector('#navLogo').addEventListener('click', event => {
   })
 
 //Request modal open
-document.querySelector('.request').addEventListener('click', event => {
+document.querySelector('.requBtn').addEventListener('click', event => {
     document.querySelector('#requestModal').classList.add('open')
 })
 

@@ -207,9 +207,13 @@ button {
     display: none;
 }
 
-#landHero {
+.heroImg {
     width:100vw;
 }
+    .heroImg.hidden {
+        display: none;
+    }
+
 
 /*** MAIN ***/
 #main {
@@ -252,41 +256,13 @@ button {
         display: none;
     }
 
-.tripleBg {
-    position: relative;
-    width: 95vw; 
-}
-
-.tagStyle  {
+.tagOffsetStyle  {
     width: 75vw;
     padding: 2em;
     border-radius: 1em; 
     background-color: var(--textBgDarker);
 }
-
-#tagLine1 {
-    position: absolute;
-    top: 1em;
-    right: 0;
-    z-index: 3;
-}
-
-#tagLine2 {
-    position: absolute;
-    top: 1.5em;
-    right: 0.5em;
-    opacity: 0.7;
-    z-index: 2;
-}
-
-#tagLine3 {
-    position: absolute;
-    top: 2em;
-    right: 1em;
-    opacity: 0.6;
-    z-index: 1;
-}
-
+    
 .tagWordLogo {
     display: flex;
     width: 13em;
@@ -295,6 +271,65 @@ button {
     .tagWordLogo.hidden {
         display: none;
     }
+
+
+/*** TripleBg ***/
+.tripleBg {
+    position: relative;
+    width: 95vw; 
+}
+
+.offsetMain {
+    position: absolute;
+    top: 1em;
+    right: 0;
+    z-index: 3;
+}
+
+.offsetLeft1 {
+    position: absolute;
+    top: 1.75em;
+    right: 0.75em;
+    opacity: 0.7;
+    z-index: 2;
+}
+
+.offsetLeft2 {
+    position: absolute;
+    top: 2.5em;
+    right: 1.5em;
+    opacity: 0.6;
+    z-index: 1;
+}
+
+.offsetBtnStyle {
+    padding: 1em;
+    border-radius: 1em; 
+    background-color: var(--btn);
+}
+
+.offsetBtn {
+    position: absolute;
+    top: 1em;
+    right: 0;
+    z-index: 3;
+}
+
+.offsetBtnLeft1 {
+    position: absolute;
+    top: 1.5em;
+    right: 0.5em;
+    opacity: 0.7;
+    z-index: 2;
+}
+
+.offsetBtnLeft2 {
+    position: absolute;
+    top: 2em;
+    right: 1em;
+    opacity: 0.6;
+    z-index: 1;
+}
 
 .notViz {
     opacity: 0;
@@ -311,10 +346,11 @@ button {
 }
 
 #missionText {
-    margin: 2em 0;
+    margin: 2em auto;
     padding: 1em;
-    width: 90vw;
-    justify-self: end;
+    width: 80vw;
+    justify-self: center;
+    align-self: center;
 }
 
 
@@ -368,6 +404,7 @@ button {
 .bra.hidden {
     display: none;
 }
+
 #pantyBox {
     grid-area: pan;
     display: grid;
@@ -422,31 +459,54 @@ button {
 #maid {
     grid-area: maid;
 
-    margin: 2em auto;
-    width: 100%;
+    margin:0 auto 1em auto;
+    width: 100vw;
 }
 
 
 /*Request*/
 .requestBox {
     grid-area: requ;
-    background-color: var(--textBg);
-    margin: 0 0.75em 2em 0.75em;
-    padding: 1.5em 1.5em 1em 1.5em;
+
+    position: relative;
+    height: 70vh;
+    margin: auto;
+    top: -1em;
+    right: 0.25em;
+}
+
+.requOffsetStyle {
+    background-color: var(--textBgDarker);
+    padding: 2em;
     border-radius: 1em;
+    width: 85vw;
 }
 
-.request {
-    display: flex;
+.requBox {
+    position: relative;
+    display: grid;
+    grid-template-rows: auto 5.5em;
+    grid-template-areas: 
+        "text"
+        "btn";
 }
-    .request h4 {
-        background-color: var(--btn);
-        color: var(--btnText);
-        margin: 1em auto;
-        padding: 1em;
-        border-radius: 1em;
-    }
 
+.requText {
+    grid-area: text;
+}
+
+.requBtn {
+    grid-area: btn;
+
+    justify-self: center;
+}
+
+.requBtn h4 {
+    color: var(--btnText);
+}
+
+
+/*** Modal ***/
 #requestModal {
     display: none;
 
@@ -455,7 +515,7 @@ button {
     left: 0;
     right: 0;
 
-    background-color: var(--textBgDarker);
+    background-color: var(--textBg);
     max-width: 90vw;
     margin: auto;
     padding: 1.5em;
@@ -470,6 +530,7 @@ button {
 }
     #requestModal.open {
         display: grid;
+        z-index: 10;
     }
 
 #modalX {
