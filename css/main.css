@@ -236,17 +236,17 @@ button {
     grid-area: tag;
     
     position: relative;
-    height: 50vh;
-    margin: 0 0.75em 1em 0.75em;
+    min-height: 50vh;
+    max-height: 80vh;
 }
 
 .tagBg {
     position: absolute;
     top: 0;
-    right: 0;
+    left: 0;
     margin: auto;
     opacity:.9;
-  
+    margin: -2em 0.75em 1em 0.75em;
 }
     .tagBg.hidden {
         display: none;
@@ -255,7 +255,6 @@ button {
 .tripleBg {
     position: relative;
     width: 95vw; 
-    margin: 2em 0 2em 1em;
 }
 
 .tagStyle  {
@@ -267,15 +266,15 @@ button {
 
 #tagLine1 {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 1em;
+    right: 0;
     z-index: 3;
 }
 
 #tagLine2 {
     position: absolute;
-    top: 1em;
-    left: 1em;
+    top: 1.5em;
+    right: 0.5em;
     opacity: 0.7;
     z-index: 2;
 }
@@ -283,7 +282,7 @@ button {
 #tagLine3 {
     position: absolute;
     top: 2em;
-    left: 2em;
+    right: 1em;
     opacity: 0.6;
     z-index: 1;
 }
