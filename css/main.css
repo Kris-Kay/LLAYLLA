@@ -240,7 +240,7 @@ button {
     grid-area: tag;
     
     position: relative;
-    min-height: 50vh;
+    min-height: 60vh;
     max-height: 80vh;
 }
 
@@ -250,13 +250,14 @@ button {
     left: 0;
     margin: auto;
     opacity:.9;
-    margin: -2em 0.75em 1em 0.75em;
+    margin: -2em 0.75em 3em 0.75em;
 }
     .tagBg.hidden {
         display: none;
     }
 
 .tagOffsetStyle  {
+    margin: 5em 0;
     width: 75vw;
     padding: 2em;
     border-radius: 1em; 
