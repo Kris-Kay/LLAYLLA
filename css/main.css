@@ -198,8 +198,7 @@ button {
     grid-area: logo;
     justify-self: start;
     align-self: start;
-
-    padding: 0.75em;
+    margin: 1em;
 }
     #navLogo img {
         width: 2em;
@@ -219,7 +218,7 @@ button {
 
     display: grid;
     grid-template-columns: 100vw;
-    grid-template-rows: repeat(6, auto);
+    grid-template-rows: 50vh auto auto auto auto auto;
     grid-template-areas: 
         "tag"
         "tanga"
@@ -231,31 +230,59 @@ button {
         justify-items: center; 
 }
 
+
 #tagLineBox {
     grid-area: tag;
-    position: relative; 
-    margin: 1em 0;
+    margin: 0.75em;
+    position: relative;
 }
 
 .tagBg {
-    width: 95vw;
-    margin: auto;
-}
-
-.tagBg.hidden {
-    display: none;
-}
-
-#tagLine {
     position: absolute;
-    top: 2em;
-    left: 0;
+    top: 0;
     right: 0;
-    width: 80vw;
-    padding: 2em;
     margin: auto;
+    opacity:.9;
+  
+}
+    .tagBg.hidden {
+        display: none;
+    }
+
+.tripleBg {
+    position: relative;
+    width: 95vw; 
+    margin: 2em 0;
+}
+
+.tagStyle  {
+    width: 75vw;
+    padding: 2em;
     border-radius: 1em; 
     background-color: var(--textBgDarker);
+}
+
+#tagLine1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+}
+
+#tagLine2 {
+    position: absolute;
+    top: 1em;
+    left: 1em;
+    opacity: 0.7;
+    z-index: 2;
+}
+
+#tagLine3 {
+    position: absolute;
+    top: 2em;
+    left: 2em;
+    opacity: 0.6;
+    z-index: 1;
 }
 
 .tagWordLogo {
@@ -263,9 +290,12 @@ button {
     width: 13em;
     padding: 0 0 0.5em 0;
 }
+    .tagWordLogo.hidden {
+        display: none;
+    }
 
-.tagWordLogo.hidden {
-    display: none;
+.notViz {
+    opacity: 0;
 }
 
 .icon {
