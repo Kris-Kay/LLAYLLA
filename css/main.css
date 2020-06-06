@@ -41,17 +41,17 @@ html {
 /* Dark mode  */
 html.dark {
     --bg: #003a4c;
-    --textBg: #002e3d;
-    --textBgDarker: #002e3d;
+    --textBg: #ee6533;
+    --textBgDarker: #ee6533;
     --text: #ffe4d7;
     --h1: #ea3e00;
-    --h2: #ea3e00;
+    --h2: #ffe4d7;
     --h3: #ffd2bc;
     --h4: #ffd2bc;
     --h5: #ffd2bc; 
     --footBg: #003a4c;
     --footText: #ffe4d7;
-    --btn: #ee6533;
+    --btn: #003a4c;
     --btnText: #ffd2bc;
     --link: #ee6533;
     --boxShdw: #ffd2bc22;
@@ -61,7 +61,7 @@ html.dark {
 
 
 body {
-    --font-head: 'Lexend Deca', sans-serif;
+    --font-head: 'Jost', sans-serif;
     --font-body: 'Jost', sans-serif;
 
     position: relative;
@@ -200,7 +200,7 @@ button {
     margin: 1em;
 }
     #navLogo img {
-        width: 2em;
+        width: 2.5em;
     }
 
 .navLogo.hidden {
@@ -240,8 +240,7 @@ button {
     grid-area: tag;
     
     position: relative;
-    min-height: 60vh;
-    max-height: 80vh;
+    height: 50vh;
 }
 
 .tagBg {
@@ -250,7 +249,7 @@ button {
     left: 0;
     margin: auto;
     opacity:.9;
-    margin: -2em 0.75em 3em 0.75em;
+    margin: -1em 0.75em 3em 0.75em;
 }
     .tagBg.hidden {
         display: none;
@@ -344,6 +343,8 @@ button {
     width: 100vw;
     display: grid;
     grid-template-rows: auto auto auto;
+
+    margin: 2em auto;
 }
 
 #missionText {
@@ -360,7 +361,7 @@ button {
     grid-area: mbp;
 
     background-color: var(--textBg);
-    margin: 2em 0.75em;
+    margin: 1em 0.75em;
     padding: 1.5em;
     border-radius: 1em;
 
