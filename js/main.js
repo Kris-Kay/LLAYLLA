@@ -20,12 +20,15 @@ document.querySelector('#navLogo').addEventListener('click', event => {
 //Request modal open
 document.querySelector('.requBtn').addEventListener('click', event => {
     document.querySelector('#requestModal').classList.add('open')
+    document.querySelector('.modalBg').classList.add('open')
 })
 
 //Request modal X
 document.querySelector('#modalX').addEventListener('click', event => {
     document.querySelector('#requestModal').classList.remove('open')
+    document.querySelector('.modalBg').classList.remove('open')
 })
+
 
 //Copy to clipboard Btn 
 var copyEmailBtn = document.querySelector('.js-emailcopybtn');  

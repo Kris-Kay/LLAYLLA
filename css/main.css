@@ -20,7 +20,7 @@ Red fade: #f28b66 */
 /* Light mode */
 html {
     --bg: #ffffff;
-    --textBg: #ffdbc9;
+    --textBg: #ffe4d7;
     --textBgDarker: #ffd2bc;
     --text: #003a4c;
     --h1: #ea3e00;
@@ -232,7 +232,17 @@ button {
 }
 
 .icon {
-    width: 1.5rem;
+    width: 1.75rem;
+    margin: 0 0.15em;
+    transition: transform 0.3s;
+    transition-delay: 0s;
+    transition-timing-function: ease-in-out;
+}
+
+.icona:hover,
+.icon :focus {
+    cursor: pointer;
+    transform: scale(1.2);
 }
 
 /*** Tag Line ***/
@@ -451,7 +461,7 @@ button {
 .imgText {
     /* width: 80%; */
     margin: 0.75em;
-    background-color: var(--textBg);
+    background-color: var(--textBgDarker);
     padding: 1.5em;
     border-radius: 1em;
 }
@@ -509,6 +519,21 @@ button {
 
 
 /*** Modal ***/
+
+.modalBg {
+    display: none;
+}
+    .modalBg.open {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 100;
+        width: 100vw;
+        height: 100vh;
+        background-color: #ffd2bc88;
+    }
+
 #requestModal {
     display: none;
 
@@ -516,6 +541,7 @@ button {
     bottom: 6em;
     left: 0;
     right: 0;
+    z-index: 101;
 
     background-color: var(--textBg);
     max-width: 90vw;
@@ -567,6 +593,10 @@ button {
     justify-self: end;
 }
 
+.copyBtn {
+    width: 1.5em;
+}
+
 .copyBtn.hidden {
     display: none;
 }
@@ -593,6 +623,7 @@ button {
     display: block;
     grid-area: social;
     justify-self: end;
+    pointer-events: none;
 }
 
 #copyR {
