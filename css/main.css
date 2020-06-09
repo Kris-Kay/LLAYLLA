@@ -861,126 +861,91 @@ button {
 }
 
 
-/*** tablet 960 ******************************/
+/*** tablet 960 ******************************
 @media screen and (min-width: 960px) {
+   
+}
+*/
+
+/*** Laptop / iPad 1024 ******************************/
+@media screen and (min-width: 1024px) {
     body {
-        font-size: 1.2em;
+        font-size: 1.3em;
     }
 
     body.dark {
-        font-size: 1.2em;
+        font-size: 1.3em;
     }
 
-    #tagLine {
-        width: 55vw; 
+    h2 {
+        font-size: 2em;
+        line-height: 1.25em;
     }
 
-    #maid {
-        width: 55vw;
+    li {
+        font-size: 1.3em;
+        line-height: 1.5;
     }
 
     #navLogo img {
-        width: 5em;
+        width: 4em;
     }
 
     .icon {
         width: 2rem;
     }
 
+    #tagLineBox {
+        height: 80vh;
+    }
+
+    .tagOffsetStyle  {
+        width: 45vw;
+    }
+
+    #missionText {
+        margin: 5em auto;
+        width: 60vw;
+    }
+
     #maskBraPanty {
-        max-width: 55vw;
-        margin: 2em auto;
+        max-width: 50vw;
+        margin: 3em auto;
     }
         #maskBraPanty img {
             width: 25vw;
         }
         #maskBraPanty h1 {
-            font-size: 3em;
+            font-size: 2.75em;
         }
 
-    li {
-        font-size: 1.2em;
+    .slide { 
+    width: 70%;
     }
-
+    
     .imgText {
         max-width: 55vw;
         margin: 0.75em auto 1.5em 0.75em;
-    }
-
-    .requestBox {
-        max-width: 55vw;
-    }
-
-    #requestModal {
-        bottom: 7em;
-        max-width: 55vw;
-    }
-}
-
-
-/*** Laptop / iPad 1024 ******************************/
-@media screen and (min-width: 1024px) {
-    body {
-        font-size: 1.4em;
-    }
-
-    body.dark {
-        font-size: 1.4em;
-    }
-
-    #navLogo {
-        padding: 2em;
-    }
-
-    #navLogo img {
-        width: 6em;
-    }
-
-    #tagLine {
-        width: 60vw; 
-    }
-
-    .tagBg {
-        width: 80vw;
-        margin: auto;
-    }
-
-    .icon {
-        width: 2.75rem;
     }
 
     #maid {
-        width: 60vw;
-        display: grid;
-    }
-
-    #maskBraPanty {
-        max-width: 60vw;
-        margin: auto;
-    }
-
-    #maskBraPanty img {
-        width: 40vw;
-        padding: 2em;
-        margin: auto;
-    }
-
-    #maskBraPanty h1 {
-        font-size: 2.5em;
-    }
-
-    .imgText {
-        max-width: 60vw;
-        margin: 0.75em auto 1.5em 0.75em;
+        width: auto;
+        object-fit: contain;
+        margin: 0;
     }
 
     .requestBox {
-        max-width: 60vw;
+        height: 50vh;
+        width: auto;
     }
 
+    .requOffsetStyle {
+        width: 55vw;
+        margin: 5em 0.75em 0.75em 0.75em;
+    }
+    
     #requestModal {
-        bottom: 7em;
-        max-width: 60vw;
+        width: 50vw;
     }
 } 
 
