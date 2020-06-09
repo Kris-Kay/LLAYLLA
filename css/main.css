@@ -151,6 +151,7 @@ h5 {
     font-family: var(--font-body);
     font-weight: 400;
     line-height: 1.5;
+    letter-spacing: .5px;
     color: var(--h5);
 }
 
@@ -239,7 +240,7 @@ button {
 }
 
 .icon {
-    width: 1.75rem;
+    width: 1.5rem;
     margin: 0 0.15em;
     transition: transform 0.3s;
     transition-delay: 0s;
@@ -253,57 +254,50 @@ button {
 }
 
 /*** Tag Line ***/
-#tagLineBox {
-    grid-area: tag;
-    
-    position: relative;
-    height: 50vh;
-}
-
-.tagBg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    margin: auto;
-    opacity:.9;
-    margin: -1em 0.75em 3em 0.75em;
-}
-    .tagBg.hidden {
-        display: none;
-    }
-
-.tagOffsetStyle  {
-    margin: 5em 0;
-    width: 75vw;
-    padding: 2em;
-    border-radius: 1em; 
-    background-color: var(--textBgDarker);
-}
-    
 .tagWordLogo {
     display: flex;
-    width: 13em;
+    width: 12em;
     padding: 0 0 0.5em 0;
 }
     .tagWordLogo.hidden {
         display: none;
     }
 
-
-/*** TripleBg ***/
-.tripleBg {
+#tagLineBox {
+    grid-area: tag;
+    
     position: relative;
-    width: 95vw; 
+    height: 42vh;
+    margin: 0.75em;
 }
 
-.offsetMain {
+.tagBg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity:.9;
+    margin: -2em auto 3em auto;
+}
+    .tagBg.hidden {
+        display: none;
+    }
+
+.tagOffsetStyle  {
+    margin: 1.9em 0.75em;
+    width: 75vw;
+    padding: 2em;
+    border-radius: 1em; 
+    background-color: var(--textBgDarker);
+}
+
+.tagoffsetMain {
     position: absolute;
     top: 1em;
-    right: 0;
+    right: 0em;
     z-index: 3;
 }
 
-.offsetLeft1 {
+.tagoffsetLeft1 {
     position: absolute;
     top: 1.75em;
     right: 0.75em;
@@ -311,7 +305,7 @@ button {
     z-index: 2;
 }
 
-.offsetLeft2 {
+.tagoffsetLeft2 {
     position: absolute;
     top: 2.5em;
     right: 1.5em;
@@ -319,33 +313,11 @@ button {
     z-index: 1;
 }
 
-.offsetBtnStyle {
-    padding: 1em;
-    border-radius: 1em; 
-    background-color: var(--btn);
-}
 
-.offsetBtn {
-    position: absolute;
-    top: 1em;
-    right: 0;
-    z-index: 3;
-}
-
-.offsetBtnLeft1 {
-    position: absolute;
-    top: 1.5em;
-    right: 0.5em;
-    opacity: 0.7;
-    z-index: 2;
-}
-
-.offsetBtnLeft2 {
-    position: absolute;
-    top: 2em;
-    right: 1em;
-    opacity: 0.6;
-    z-index: 1;
+/*** TripleBg ***/
+.tripleBg {
+    position: relative;
+    width: 95vw; 
 }
 
 .notViz {
@@ -409,9 +381,9 @@ button {
     #maskBox img {
         justify-self: center;
     }
-.mask.hidden {
-    display: none;
-}
+    .mask.hidden {
+        display: none;
+    }
 
 #braBox {
     grid-area: bra;
@@ -420,9 +392,9 @@ button {
     #braBox img {
         justify-self: center;
     }
-.bra.hidden {
-    display: none;
-}
+    .bra.hidden {
+        display: none;
+    }
 
 #pantyBox {
     grid-area: pan;
@@ -432,9 +404,9 @@ button {
         justify-self: center;
     }
 
-.panty.hidden {
-        display: none;
-}
+    .panty.hidden {
+            display: none;
+    }
 
 #mbpText {
     grid-area: text;
@@ -486,28 +458,49 @@ button {
 /*Request*/
 .requestBox {
     grid-area: requ;
-
     position: relative;
     height: 70vh;
-    margin: auto;
-    top: -1em;
-    right: 0.25em;
 }
 
 .requOffsetStyle {
-    background-color: var(--textBgDarker);
-    padding: 2em;
-    border-radius: 1em;
     width: 85vw;
+    background-color: var(--textBgDarker);
+    border-radius: 1em;
+    padding: 2em;
+    margin: 0.75em;
+}
+
+.offsetMain {
+    position: absolute;
+    top: 1em;
+    left: 1.5em;
+    z-index: 3;
+}
+
+.offsetLeft1 {
+    position: absolute;
+    top: 1.75em;
+    left: 0.75em;
+    opacity: 0.7;
+    z-index: 2;
+}
+
+.offsetLeft2 {
+    position: absolute;
+    top: 2.5em;
+    left: 0em;
+    opacity: 0.6;
+    z-index: 1;
 }
 
 .requBox {
     position: relative;
     display: grid;
-    grid-template-rows: auto 5.5em;
+    grid-template-rows: auto 5em;
     grid-template-areas: 
         "text"
         "btn";
+    justify-items: start;
 }
 
 .requText {
@@ -516,12 +509,41 @@ button {
 
 .requBtn {
     grid-area: btn;
-
-    justify-self: center;
+    justify-self: start;
 }
 
 .requBtn h4 {
     color: var(--btnText);
+}
+
+/*** BTN offset ***/
+.offsetBtnStyle {
+    padding: 1em;
+    border-radius: 1em; 
+    background-color: var(--btn);
+}
+
+.offsetBtn {
+    position: absolute;
+    top: 1em;
+    left: 1em;
+    z-index: 3;
+}
+
+.offsetBtnLeft1 {
+    position: absolute;
+    top: 1.5em;
+    left: 0.5em;
+    opacity: 0.7;
+    z-index: 2;
+}
+
+.offsetBtnLeft2 {
+    position: absolute;
+    top: 2em;
+    left: 0em;
+    opacity: 0.6;
+    z-index: 1;
 }
 
 
@@ -550,18 +572,18 @@ button {
     right: 0;
     z-index: 101;
 
-    background-color: var(--textBg);
-    max-width: 90vw;
+    background-color: #ee6533;
+    width: 95vw;
     margin: auto;
     padding: 1.5em;
     border-radius: 1em;
 
-    grid-template-columns: auto 3em;
+    grid-template-columns: auto 3em 2em;
     grid-template-rows: auto auto auto;
     grid-template-areas: 
-        "intro x"
-        "word  word"
-        "email btn";
+        "intro into x"
+        "word  word word"
+        "email btn  .";
 }
     #requestModal.open {
         display: grid;
@@ -573,31 +595,32 @@ button {
     align-self: start;
     justify-self: end;
 }
-
-.modalX.hidden {
-    display: none;
-}
+    .modalX.hidden {
+        display: none;
+    }
 
 #modalIntro {
     grid-area: intro;
     margin: 0 0.5em 0 0;
+    color: #003a4c;
 }
 
 #modalWord {
     grid-area: word;
     margin: 1em 0 0 0;
+    color: #003a4c;
 }
 
 #modalEmail {
     grid-area: email;
-    margin: 0 0.5em 0 0;
-    justify-self: end;
+    margin: 0 0.25em 0 0;
+    justify-self: start;
     align-self: center;
 }
 
 #emailCopy {
     grid-area: btn;
-    justify-self: end;
+    justify-self: start;
 }
 
 .copyBtn {
@@ -615,6 +638,9 @@ button {
     display: none;
 }
 
+#modalEmail {
+    color: #ffe4d7;
+}
 
 /*** FOOT ***/
 #foot {
@@ -651,26 +677,24 @@ button {
 @media screen and (min-width: 375px) {
     body {
         font-size: 1.1em;
-        line-height: 1.25em;
     }
 
     body.dark {
         font-size: 1.1em;
-        line-height: 1.25em;
-    }
-    
-    #tagLine {
-        width: 80vw; 
     }
 
     #navLogo img {
-        width: 2.5em;
+        width: 2.6em;
     }
 
     .icon {
-        width: 1.75rem;
+        width: 1.75em;
     }
 
+    #tagLineBox {
+        height: 55vh;
+    }
+    
     #maskBraPanty {
         max-width: 90vw;
         margin: auto;
@@ -681,42 +705,61 @@ button {
         #maskBraPanty h1 {
             font-size: 2em;
         }
+
+    .requestBox {
+        height: 70vh;
+    }
+
+    #requestModal {
+        width: 92vw;
+        margin: auto;
+    }
+
 }
 
 /*** phone landscape 425 **************************/
 @media screen and (min-width: 425px) {
-    body {
-        font-size: 1.1em;
-        line-height: 1.25em;
-    }
-
-    body.dark {
-        font-size: 1.1em;
-        line-height: 1.25em;
-    }
-
-    #tagLine {
-        width: 80vw; 
-    }
 
     #navLogo img {
         width: 3em;
     }
 
     .icon {
-        width: 1.75rem;
+        width: 1.8rem;
+    }
+
+    #tagLineBox {
+        height: 61vh;
+    }
+
+    .tagOffsetStyle  {
+        margin: 3em 0;
+        width: 70vw;
     }
 
     #maskBraPanty {
-        max-width: 90vw;
+        max-width: 80vw;
         margin: auto;
     }
         #maskBraPanty img {
-            width: 50vw;
+            width: 48vw;
         }
         #maskBraPanty h1 {
             font-size: 2em;
         }
+
+    .requestBox {
+        height: 75vh;
+    }
+
+    .requOffsetStyle {
+        width: 80vw;
+    }
+    
+    #requestModal {
+        width: 85vw;
+    }
+
 }
 
 
@@ -730,24 +773,44 @@ button {
         font-size: 1.2em;
     }
 
-    #tagLine {
-        width: 60vw; 
+    #main {
+        grid-area: main;  
+    
+        display: grid;
+        grid-template-columns: auto auto ;
+        grid-template-rows: auto auto auto auto auto;
+        grid-template-areas: 
+            "tag tag"
+            "miss miss"
+            "mbp mbp"
+            "carou carou"
+            "requ maid";
     }
 
     #navLogo img {
-        width: 4.5em;
+        width: 4em;
     }
 
     .icon {
         width: 2rem;
     }
 
-    #maid {
-        max-width: 60vw;
+    #tagLineBox {
+        height: 120vh;
+    }
+
+    .tagOffsetStyle  {
+        margin: 5em 0;
+        width: 55vw;
+    }
+
+    #missionText {
+        margin: 3em auto;
+        width: 70vw;
     }
 
     #maskBraPanty {
-        max-width: 60vw;
+        max-width: 55vw;
         margin: 2em auto;
     }
         #maskBraPanty img {
@@ -758,20 +821,29 @@ button {
         }
 
     .imgText {
-        max-width: 60vw;
+        max-width: 55vw;
         margin: 0.75em auto 1.5em 0.75em;
     }
 
-    .requestBox {
-        max-width: 60vw;
-        margin: 0 auto 2em auto;
+    #maid {
+        width: auto;
+        height: 90vh;
+        object-fit: contain;
     }
 
-    #requestModal {
-        bottom: 7em;
-        max-width: 60vw;
-        margin: auto;
+    .requestBox {
+        height: 65vh;
+        width: auto;
     }
+
+    .requOffsetStyle {
+        width: 55vw;
+    }
+    
+    #requestModal {
+        width: 80vw;
+    }
+
 }
 
 
