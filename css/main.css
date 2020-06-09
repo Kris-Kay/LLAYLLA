@@ -204,7 +204,7 @@ button {
     transition-timing-function: ease-in-out;
 }
     #navLogo img {
-        width: 2.5em;
+        width: 2.8em;
     }
     #navLogo:hover, 
     #navLogo:focus{
@@ -521,7 +521,21 @@ button {
     padding: 1em;
     border-radius: 1em; 
     background-color: var(--btn);
+   
 }
+    
+
+.btnBox {
+    transition: transform 0.3s;
+    transition-delay: 0s;
+    transition-timing-function: ease-in-out;
+    white-space: nowrap;
+}
+    .btnBox:hover,
+    .btnBox:focus {
+        transform: scale(1.2);
+    }
+
 
 .offsetBtn {
     position: absolute;
@@ -684,7 +698,7 @@ button {
     }
 
     #navLogo img {
-        width: 2.6em;
+        width: 3em;
     }
 
     .icon {
@@ -692,7 +706,7 @@ button {
     }
 
     #tagLineBox {
-        height: 50vh;
+        height: 48vh;
     }
     
     #maskBraPanty {
@@ -733,7 +747,7 @@ button {
     }
 
     .tagOffsetStyle  {
-        margin: 3em 0;
+        margin: 3em 0.75em;
         width: 70vw;
     }
 
@@ -796,11 +810,10 @@ button {
     }
 
     #tagLineBox {
-        height: 120vh;
+        height: 80vh;
     }
 
     .tagOffsetStyle  {
-        margin: 5em 0;
         width: 55vw;
     }
 
@@ -832,16 +845,17 @@ button {
     }
 
     .requestBox {
-        height: 65vh;
+        height: 50vh;
         width: auto;
     }
 
     .requOffsetStyle {
         width: 55vw;
+        margin: 5em 0.75em 0.75em 0.75em;
     }
     
     #requestModal {
-        width: 80vw;
+        width: 50vw;
     }
 
 }
