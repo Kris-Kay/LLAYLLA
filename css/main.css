@@ -229,11 +229,12 @@ button {
 
     display: grid;
     grid-template-columns: 100vw;
-    grid-template-rows: auto auto auto auto auto auto;
+    grid-template-rows: repeat(7, auto);
     grid-template-areas: 
         "tag"
         "miss"
         "mbp"
+        "text"
         "carou"
         "maid"
         "requ";
@@ -351,18 +352,17 @@ button {
 
     background-color: var(--textBg);
     margin: 1em 0.75em;
-    padding: 1.5em;
+    padding: 3em 2em;
     border-radius: 1em;
 
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows: auto auto auto auto auto;
+    grid-template-rows: auto auto auto auto;
     grid-template-areas: 
         "h1"
         "mask"
         "bra"
-        "pan"
-        "text";
+        "pan";
 }
     #maskBraPanty img {
         width: 60vw;
@@ -410,6 +410,41 @@ button {
 
 #mbpText {
     grid-area: text;
+    height: 10em;
+    position: relative;
+}
+
+.mbpStyle {
+    margin: 0.75em;
+    width: 75vw;
+    padding: 2em;
+    border-radius: 1em; 
+    background-color: var(--textBgDarker);
+    height: auto;
+}
+
+
+.mbpOffset {
+    position: absolute;
+    top: 1em;
+    right: 0em;
+    z-index: 3;
+}
+
+.mbpOffset1 {
+    position: absolute;
+    top: 1.75em;
+    right: 0.75em;
+    opacity: 0.7;
+    z-index: 2;
+}
+
+.mbpOffset2 {
+    position: absolute;
+    top: 2.5em;
+    right: 1.5em;
+    opacity: 0.6;
+    z-index: 1;
 }
 
 
@@ -879,7 +914,10 @@ button {
 
     h2 {
         font-size: 2em;
-        line-height: 1.25em;
+    }
+
+    h5 {
+        font-size: 1.25em;
     }
 
     li {
@@ -922,7 +960,7 @@ button {
     .slide { 
     width: 70%;
     }
-    
+
     .imgText {
         max-width: 55vw;
         margin: 0.75em auto 1.5em 0.75em;
@@ -947,79 +985,84 @@ button {
     #requestModal {
         width: 50vw;
     }
+
+    .copyBtn {
+        width: 2.5em;
+    }
 } 
 
 /*** laptop 1440 ********************************/
 @media screen and (min-width: 1440px) {	
     body {
-        font-size: 1.4em;
+        font-size: 1.5em;
     }
 
     body.dark {
-        font-size: 1.4em;
+        font-size: 1.5em;
     }
 
     li {
-        font-size: 1.8em;
+        font-size: 1.7em;
     }
 
-    #navLogo {
-        padding: 2em;
-    }
-        #navLogo img {
-            width: 7em;
-        }
-
-    #tagLine {
-        width: 50vw; 
-    }
-
-    .tagBg {
-        width: 80vw;
-        margin: auto;
+    #navLogo img {
+        width: 6em;
     }
 
     .icon {
-        width: 2.75rem;
+        width: 3.5rem;
     }
 
-    #maid {
+    #tagLineBox {
+        height: 90vh;
+    }
+
+    .tagOffsetStyle  {
+        width: 45vw;
+    }
+
+    #missionText {
+        margin: 5em auto;
         width: 60vw;
     }
 
     #maskBraPanty {
         max-width: 50vw;
     }
+        #maskBraPanty img {
+            width: 25vw;
+        }
+        #maskBraPanty h1 {
+            font-size: 2.75em;
+        }
 
-    #maskBraPanty img {
-        width: 30vw;
+    .slide { 
+    width: 70%;
     }
-
-    #maskBraPanty h1 {
-        font-size: 3em;
-    }
-
+    
     .imgText {
         max-width: 50vw;
-        margin: 1em auto 1.5em 1em;
+        margin: 0.75em;
+    }
+
+    #maid {
+        width: auto;
+        object-fit: contain;
+        margin: 0;
     }
 
     .requestBox {
-        max-width: 50vw;
+        height: 50vh;
+        width: auto;
     }
 
+    .requOffsetStyle {
+        width: 40vw;
+        margin: 5em 0.75em 0.75em 0.75em;
+    }
+    
     #requestModal {
-        bottom: 7em;
-        max-width: 50vw;
-    }
-
-    #foot {
-        padding: 1em;
-    }
-
-    /*carousel*/
-    .slide { 
-        width: 70%;
+        width: 40vw;
     }
 } 
 
