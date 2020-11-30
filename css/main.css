@@ -916,6 +916,10 @@ button {
         font-size: 2em;
     }
 
+    h4 {
+        font-size: 2em;
+    }
+
     h5 {
         font-size: 1.25em;
     }
@@ -1005,6 +1009,10 @@ button {
         font-size: 1.7em;
     }
 
+    h5 {
+        font-size: 1.5em;
+    }
+
     #navLogo img {
         width: 6em;
     }
@@ -1057,12 +1065,12 @@ button {
     }
 
     .requOffsetStyle {
-        width: 40vw;
+        width: 45vw;
         margin: 5em 0.75em 0.75em 0.75em;
     }
     
     #requestModal {
-        width: 40vw;
+        width: 45vw;
     }
 } 
 
@@ -1074,6 +1082,10 @@ button {
 
     body.dark {
         font-size: 1.5em;
+    }
+
+    h4 {
+        font-size: 2.5em;
     }
 
     #navLogo {
@@ -1162,7 +1174,7 @@ button {
     }
 
     #maskBraPanty {
-        max-width: 40vw;
+        max-width: 45vw;
     }
 
     #maskBraPanty img {
