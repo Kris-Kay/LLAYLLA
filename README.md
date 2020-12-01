@@ -1,5 +1,3 @@
 # LLAYLLA
 
-Mobile website
-
-Work in progress!
+Single page website for smart apparel brand.
